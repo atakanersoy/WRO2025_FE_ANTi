@@ -1,6 +1,6 @@
 # Software Documentation
 
-This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Thursday, May 29, 2025, at 08:03 PM +03**.
+This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Thursday, May 29, 2025, at 08:17 PM +03**.
 
 ## Software Overview
 Our software is designed to handle the WRO 2025 challenges: navigating dynamic racetracks, respecting traffic signs, and performing parallel parking. Key features include:

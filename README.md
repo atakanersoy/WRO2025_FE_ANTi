@@ -1,10 +1,10 @@
 <center><h1>WRO 2025 Future Engineers – ANTi</h1></center>
 
-![Banner](other/transparent_8000x8000_WRO2025_FE_ANTi_logo_05-05-2025.png)
+![Banner](other/transparent_profile_picture_6900x6900_WRO2025_FE_ANTi_logo_05-05-2025.png)
 
 Welcome to the GitHub repository of **Team ANTi**, competing in the **World Robot Olympiad™ (WRO®) Future Engineers 2025** category. Our team, composed of students from Koç University, Türkiye, has designed a compact, innovative, and autonomous self-driving vehicle to tackle the dynamic challenges of the WRO 2025 competition. Our team name, **ANTi**, reflects our philosophy: like an **ANT**, our robot is exceptionally small yet highly capable, pushing the boundaries of minimalism in design. The "**ANT**i" signifies our competitive spirit, standing "versus the world" in pursuit of engineering excellence.
 
-Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Thursday, May 29, 2025, at 08:03 PM +03**.
+Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Thursday, May 29, 2025, at 08:17 PM +03**.
 
 ---
 
@@ -82,8 +82,8 @@ Team ANTi comprises three passionate students from Koç University, Türkiye, gu
 
 ### Follow Us
 <center>
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/anti.wro/)  
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@solipsy.)  
+<a href="https://www.instagram.com/anti.wro/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
+<a href="https://www.youtube.com/@solipsy."><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="YouTube"></a>
 </center>
 
 ---

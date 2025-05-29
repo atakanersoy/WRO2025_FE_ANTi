@@ -1,6 +1,6 @@
 # Team Photos
 
-This folder contains official and informal photos of Team ANTi, showcasing our team spirit and collaboration during the WRO 2025 Future Engineers project. This documentation was last updated on **Thursday, May 29, 2025, at 08:03 PM +03**.
+This folder contains official and informal photos of Team ANTi, showcasing our team spirit and collaboration during the WRO 2025 Future Engineers project. This documentation was last updated on **Thursday, May 29, 2025, at 08:17 PM +03**.
 
 ## Photo List
 - `team_official.jpg`: Official team photo with all members and coach.

@@ -1,6 +1,6 @@
 # Other Resources
 
-This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Thursday, May 29, 2025, at 08:03 PM +03**.
+This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Thursday, May 29, 2025, at 08:17 PM +03**.
 
 ## Resource List
 - `stm32h747_datasheet.pdf`: Microcontroller specifications.  
