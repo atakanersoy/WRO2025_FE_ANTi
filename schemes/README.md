@@ -1,6 +1,6 @@
 # Schemes Documentation
 
-This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Thursday, May 29, 2025, at 08:03 PM +03**.
+This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
 
 ## Overview
 Our robot’s electronics are integrated on custom **pertinax boards** (perforated PCBs), meticulously cut to minimize size. All connections and soldering were performed by the team to ensure reliability and compactness. The system operates on three power lines:
@@ -23,9 +23,9 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
 - **Button**: KLS7-TS1204 tactile switch (start action).
 
 ## Schematics
-![Wiring Diagram](wiring_diagram.jpg)
+<img src="wiring_diagram.jpg" alt="Wiring Diagram" width="600">
 
-![Both Uncut Pertinax Boards](both_uncut_pertinax_scheme.jpg)
+<img src="both_uncut_pertinax_scheme.jpg" alt="Both Uncut Pertinax Boards" width="600">
 
 ### Power Distribution
 - **Battery Management**: The LiPo Rider Plus manages charging (via USB-C) and provides a power switch. The SX1308 boosts voltage to stable levels for components.

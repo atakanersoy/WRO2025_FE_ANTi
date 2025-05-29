@@ -1,20 +1,20 @@
 # Vehicle Photos
 
-This folder contains high-quality photos of Team ANTi’s WRO 2025 Future Engineers robot, showcasing its compact design and engineering. This documentation was last updated on **Thursday, May 29, 2025, at 08:03 PM +03**.
+This folder contains high-quality photos of Team ANTi’s WRO 2025 Future Engineers robot, showcasing its compact design and engineering. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
 
 ## Photo List
 - `front_view.jpg`: Front view of the robot.  
-  ![Front View](front_view.jpg)
+  <img src="front_view.jpg" alt="Front View" width="600">
 - `rear_view.jpg`: Rear view of the robot.  
-  ![Rear View](rear_view.jpg)
+  <img src="rear_view.jpg" alt="Rear View" width="600">
 - `left_view.jpg`: Left side view.  
-  ![Left View](left_view.jpg)
+  <img src="left_view.jpg" alt="Left View" width="600">
 - `right_view.jpg`: Right side view.  
-  ![Right View](right_view.jpg)
+  <img src="right_view.jpg" alt="Right View" width="600">
 - `top_view.jpg`: Top-down view.  
-  ![Top View](top_view.jpg)
+  <img src="top_view.jpg" alt="Top View" width="600">
 - `bottom_view.jpg`: Bottom view, highlighting chassis and wiring.  
-  ![Bottom View](bottom_view.jpg)
+  <img src="bottom_view.jpg" alt="Bottom View" width="600">
 
 ## Notes
 - Photos are taken in well-lit conditions to highlight design details.

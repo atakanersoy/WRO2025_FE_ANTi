@@ -1,10 +1,15 @@
 <center><h1>WRO 2025 Future Engineers – ANTi</h1></center>
 
-![Banner](other/transparent_profile_picture_6900x6900_WRO2025_FE_ANTi_logo_05-05-2025.png)
+<img src="other/transparent_only_logo_WRO2025_FE_ANTi_logo_05-05-2025.png" alt="Banner" width="600">
+
+<center>
+<a href="https://www.instagram.com/anti.wro/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
+<a href="https://www.youtube.com/@solipsy."><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="YouTube"></a>
+</center>
 
 Welcome to the GitHub repository of **Team ANTi**, competing in the **World Robot Olympiad™ (WRO®) Future Engineers 2025** category. Our team, composed of students from Koç University, Türkiye, has designed a compact, innovative, and autonomous self-driving vehicle to tackle the dynamic challenges of the WRO 2025 competition. Our team name, **ANTi**, reflects our philosophy: like an **ANT**, our robot is exceptionally small yet highly capable, pushing the boundaries of minimalism in design. The "**ANT**i" signifies our competitive spirit, standing "versus the world" in pursuit of engineering excellence.
 
-Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Thursday, May 29, 2025, at 08:17 PM +03**.
+Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
 
 ---
 
@@ -53,8 +58,8 @@ Detailed documentation for each folder is available in respective `.md` files:
 
 Team ANTi comprises three passionate students from Koç University, Türkiye, guided by an experienced coach. Each member brings unique skills to the project, from electronics to computer vision.
 
-![Team ANTi at Work](t-photos/workplace.jpg)
-![Team Fun Moment](t-photos/team_fun.jpg)
+<img src="t-photos/workplace.jpg" alt="Team ANTi at Work" width="600">
+<img src="t-photos/team_fun.jpg" alt="Team Fun Moment" width="600">
 
 ### Members
 - **Atakan Ersoy** (Team Leader)  
@@ -79,12 +84,6 @@ Team ANTi comprises three passionate students from Koç University, Türkiye, gu
   *Background*: Senior, Electrical and Electronics Engineering, Koç University (2025)  
   *Contact*: [alieren21@ku.edu.tr](mailto:alieren21@ku.edu.tr)  
   *Born*: 2003, Türkiye
-
-### Follow Us
-<center>
-<a href="https://www.instagram.com/anti.wro/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
-<a href="https://www.youtube.com/@solipsy."><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="YouTube"></a>
-</center>
 
 ---
 
@@ -120,11 +119,11 @@ This challenge fosters innovation in STEM and robotics, encouraging students to 
 
 ## 🤖 Our Robot <a id="our-robot"></a>
 
-![ANTi Robot Front View](v-photos/front_view.jpg)
+<img src="v-photos/front_view.jpg" alt="ANTi Robot Front View" width="600">
 
 Team ANTi’s robot is a marvel of minimalism, measuring just **72mm (L) x 57mm (W) x 58mm (H)**, making it one of the smallest vehicles ever designed for the WRO Future Engineers category. Built entirely from scratch, our robot features a **3D-printed chassis** and a **print-in-place Ackermann steering mechanism**, optimized for precision and small size. Powered by a **1500 RPM N20 motor** and controlled by an **STM32H747 dual-core microcontroller**, it leverages advanced sensors like the **GC2145 2MP camera** and **VL53L1X ToF sensor** for robust navigation. Our design philosophy, inspired by the efficiency of an ant, pushes the boundaries of compact robotics while maintaining high performance.
 
-![Design to Life](other/design_to_life.jpg)
+<img src="other/design_to_life.jpg" alt="Design to Life" width="600">
 
 * [Vehicle Photos](v-photos/README.md)
 
@@ -135,23 +134,23 @@ Team ANTi’s robot is a marvel of minimalism, measuring just **72mm (L) x 57mm 
 Our hardware is meticulously selected and integrated using custom **pertinax boards** for minimal size and weight. Key components include:
 
 - **Microcontroller**: STM32H747 (dual-core, high-performance).  
-  ![STM32H747](other/STM32H747.jpg)
+  <img src="other/STM32H747.jpg" alt="STM32H747" width="600">
 - **Camera**: GC2145 (2MP CMOS, 80° view angle, <1.0% distortion).  
-  ![GC2145 Camera](other/GC2145.jpg)
+  <img src="other/GC2145.jpg" alt="GC2145 Camera" width="600">
 - **ToF Sensor**: VL53L1X (400cm range, full FoV).  
-  ![VL53L1X](other/VL53L1X.jpg)
+  <img src="other/VL53L1X.jpg" alt="VL53L1X" width="600">
 - **Motor**: 1500 RPM N20 with encoder, selected for its small size and fast speed. Speed was determined by calculating and comparing different wheel/tires sizes and motor speeds for the 3m x 3m game field, using minimum and maximum optimal voltages to set the maximum speed (see [motor_speed_calculations.jpg](other/motor_speed_calculations.jpg)).  
-  ![N20 Motor](other/1500rpm_N20_dc_motor_encoder.jpg)
+  <img src="other/1500rpm_N20_dc_motor_encoder.jpg" alt="N20 Motor" width="600">
 - **Servo**: Feetech FS0307 submicro servo motor, chosen for its minimal size after testing MG90S and SG90 servos.  
-  ![FS0307 Servo](other/FS0307.jpg)
+  <img src="other/FS0307.jpg" alt="FS0307 Servo" width="600">
 - **Battery**: Power-Xtra PX103035 (30x35x10mm, 1000mAh), selected for its minimal size and capacity, lasting far more than the 3-minute round time, with 1000mAh chosen for long trial time. Run time calculated as Run Time = Capacity (mAh) / Total Current (mA), with approximate run time of 4-5 hours and full charge time of ~45 minutes (max 10W at 2A, min 0.8W when fully charged, total current estimated at ~200–250mA).  
-  ![Battery](other/PX103035.jpg)
+  <img src="other/PX103035.jpg" alt="Battery" width="600">
 - **Tires**: LEGO 87697, chosen for their small size, suitability, good performance, and traction, with a diameter of 21mm, width of 12mm, and a circumferential center ridge compared to similar parts.
 
-![Soldering Setup](other/soldering_setup.jpg)  
+<img src="other/soldering_setup.jpg" alt="Soldering Setup" width="600">  
 *Our soldering setup for assembling the pertinax boards.*
 
-![Wiring Diagram](schemes/wiring_diagram.jpg)
+<img src="schemes/wiring_diagram.jpg" alt="Wiring Diagram" width="600">
 
 Detailed hardware specifications and schematics are available in [Schemes Documentation](schemes/README.md).
 
@@ -161,7 +160,7 @@ Detailed hardware specifications and schematics are available in [Schemes Docume
 
 Our software is written in **MicroPython** and runs on the STM32H747. It uses the **CIELAB color space** for robust computer vision, enabling precise differentiation of track elements and traffic signs. The software integrates sensor data (camera, ToF, IMU) for navigation and control, with algorithms optimized for the dynamic WRO racetrack.
 
-![Image Processing Setup](other/image_processing_setup.jpg)
+<img src="other/image_processing_setup.jpg" alt="Image Processing Setup" width="600">
 
 See [Software Documentation](src/README.md) for details on algorithms, libraries, and code structure.
 
@@ -175,7 +174,7 @@ Our robot’s mechanical design prioritizes compactness and durability:
 - **Differential**: Custom 4-gear mechanical differential.
 - **Tires**: LEGO 87697 (21mm diameter, 12mm width), selected for their small size, suitability, good performance, and traction, featuring a circumferential center ridge compared to similar parts.
 
-![CAD Fusion Right View](other/CAD_fusion_right_view.jpg)
+<img src="other/CAD_fusion_right_view.jpg" alt="CAD Fusion Right View" width="600">
 
 Detailed mechanical specifications are in [Models Documentation](models/README.md).
 
@@ -197,7 +196,7 @@ Videos showcasing our robot’s performance in testing and competition scenarios
 
 Official and informal photos of Team ANTi are available in [Team Photos](t-photos/README.md).
 
-![Team ANTi Official Photo](t-photos/team_official.jpg)
+<img src="t-photos/team_official.jpg" alt="Team ANTi Official Photo" width="600">
 
 ---
 
@@ -205,7 +204,7 @@ Official and informal photos of Team ANTi are available in [Team Photos](t-photo
 
 Detailed photos of our robot from all angles (top, bottom, front, back, left, right) are in [Vehicle Photos](v-photos/README.md).
 
-![ANTi Robot Top View](v-photos/top_view.jpg)
+<img src="v-photos/top_view.jpg" alt="ANTi Robot Top View" width="600">
 
 ---
 
@@ -222,7 +221,7 @@ This project is licensed under the **GNU Affero General Public License v3.0 (AGP
 ```
 GNU Affero General Public License v3.0
 
-Copyright (C) 2025 Team ANTi
+Copyright (C) 2025 Atakan Ersoy (atakanersoy)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published

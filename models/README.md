@@ -1,6 +1,6 @@
 # Models Documentation
 
-This folder contains the 3D CAD models used for designing and manufacturing Team ANTi’s robot for the WRO 2025 Future Engineers category. This documentation was last updated on **Thursday, May 29, 2025, at 08:03 PM +03**.
+This folder contains the 3D CAD models used for designing and manufacturing Team ANTi’s robot for the WRO 2025 Future Engineers category. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
 
 ## Design Overview
 All components of our robot, including the chassis, wheel axles, rims, motor mounts, and differential gears, were designed using **Autodesk Fusion 360**. This professional CAD software allowed us to create precise models optimized for **Fused Filament Fabrication (FFF/FDM)** 3D printing, with some exploration into other techniques like **Stereolithography (SLA)** and **Continuous Fiber Reinforcement (CFR)**.
@@ -26,7 +26,7 @@ We tested multiple materials and printing methods to optimize durability and per
   - Nozzle: 0.4mm.
   - Printer: Ender 3v3, Zaxe Z3S.
 
-![3D Printer Setup](3d_printer.jpg)
+<img src="3d_printer.jpg" alt="3D Printer Setup" width="600">
 
 ## File List
 - `3d_printer.jpg`: Image of the 3D printer setup.
@@ -47,5 +47,9 @@ We tested multiple materials and printing methods to optimize durability and per
 2. **CAD Modeling**: Used Fusion 360 to create precise models, simulating stress and motion for steering and differential.
 3. **Prototyping**: Printed multiple iterations, adjusting tolerances for print-in-place components.
 4. **Testing**: Validated designs on the WRO track, ensuring stability and maneuverability.
+
+## Testing and Validation
+The custom 4-gear mechanical differential was tested to ensure smooth power distribution to the rear wheels. A video of the differential in action is available:
+- **Differential Test**: [differential_test.mp4](../video/differential_test.mp4) (local file, not uploaded to YouTube).
 
 For detailed mechanical specifications, see [Mechanical Characteristics](../README.md#mechanical-characteristics).

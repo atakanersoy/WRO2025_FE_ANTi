@@ -1,6 +1,6 @@
 # Software Documentation
 
-This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Thursday, May 29, 2025, at 08:17 PM +03**.
+This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
 
 ## Software Overview
 Our software is designed to handle the WRO 2025 challenges: navigating dynamic racetracks, respecting traffic signs, and performing parallel parking. Key features include:
@@ -8,7 +8,7 @@ Our software is designed to handle the WRO 2025 challenges: navigating dynamic r
 - **Sensor Fusion**: Integrates data from the **VL53L1X ToF sensor**, **LSM6DSOX IMU**, and camera for precise navigation.
 - **Control System**: Manages the **Feetech FS0307 servo** for steering and **1500 RPM N20 motor** for propulsion.
 
-![Example Detection](other/example_detection.jpg)
+<img src="other/example_detection.jpg" alt="Example Detection" width="600">
 
 ## Programming Environment
 - **Language**: MicroPython (chosen for rapid development and compatibility with STM32H747).
@@ -31,15 +31,15 @@ Our software is designed to handle the WRO 2025 challenges: navigating dynamic r
   - Combines camera and ToF data to locate the parking zone.
   - Executes a trajectory using Ackermann steering geometry to avoid it.
 
-![Parallel Parking Setup](parallel_park_setup.jpg)
+<img src="parallel_park_setup.jpg" alt="Parallel Parking Setup" width="600">
 
 - **Sensor Fusion**:
   - Adaptive low-pass filter, Adaptive Moving Average (AMA) filter, and PID control algorithms integrate IMU and ToF data for stable navigation.
   - Camera data is prioritized for visual feedback, with ToF as a fallback for distance validation.
 
-![Obstacle Challenge Strategy 1](other/obstacle_challenge_strategy_1.jpg)
+<img src="other/obstacle_challenge_strategy_1.jpg" alt="Obstacle Challenge Strategy 1" width="600">
 
-![Obstacle Challenge Strategy 2](other/obstacle_challenge_strategy_2.jpg)
+<img src="other/obstacle_challenge_strategy_2.jpg" alt="Obstacle Challenge Strategy 2" width="600">
 
 ## File List
 - `main.py`: Main control loop for autonomous operation.
