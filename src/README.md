@@ -1,6 +1,6 @@
 # Software Documentation
 
-This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Friday, May 30, 2025, at 04:36 AM +03**.
+This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Friday, May 30, 2025, at 05:30 AM +03**.
 
 ## Software Overview
 Our software handles the WRO 2025 challenges: navigating dynamic racetracks, respecting traffic signs, avoiding obstacles, and performing parallel parking. Key features include:
@@ -107,15 +107,20 @@ The vision system uses the GC2145 camera with CIELAB color space for robust dete
   - Adaptive low-pass filter, Adaptive Moving Average (AMA) filter, and PID control integrate IMU and ToF data for stability.
   - Camera data prioritizes visual feedback, with ToF as a fallback for distance validation.
 
-<img src="obstacle_challenge_strategy_1.jpg" alt="Obstacle Challenge Strategy 1" width="600">
-
-<img src="obstacle_challenge_strategy_2.jpg" alt="Obstacle Challenge Strategy 2" width="600">
-
-<img src="parallel_park_setup.jpg" alt="Parallel Parking Setup" width="600">
+<table>
+  <tr>
+    <td><img src="obstacle_challenge_strategy_1.jpg" alt="Obstacle Challenge Strategy 1" width="300"></td>
+    <td><img src="obstacle_challenge_strategy_2.jpg" alt="Obstacle Challenge Strategy 2" width="300"></td>
+    <td><img src="parallel_park_setup.jpg" alt="Parallel Parking Setup" width="225"></td>
+  </tr>
+</table>
 
 ## File List
 - `open.py`: Main control loop for the Open Challenge, handling marker detection and 12-corner navigation.
 - `obstacle.py`: Control logic for the Obstacle Challenge, managing sign detection, obstacle avoidance, and parking.
+- `/tests`: Contains several basic tests that were done while learning.
+- `ANTi_wro_sim.wbt`: The Webots simulation (referenced as `other/ANTi_wro_sim.png`) was initially developed as a universal simulation but was converted directly into physical work due to timeline constraints.  
+  <img src="../other/ANTi_wro_sim.png" alt="Webots Simulation" width="300">
 
 ## Coding Practices
 - **Modularity**: Code is organized into functions (vision, control, sensor handling) for independent testing.

@@ -1,6 +1,6 @@
 # Other Resources
 
-This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Thursday, May 29, 2025, at 10:57 PM +03**.
+This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Friday, May 30, 2025, at 05:10 AM +03**.
 
 ## Resource List
 - `stm32h747_datasheet.pdf`: Microcontroller specifications.  
@@ -25,21 +25,14 @@ This folder contains supplementary materials for Team ANTi’s WRO 2025 Future E
   <img src="BOB12009.jpg" alt="BOB-12009" width="600">
 - `px103035_battery_specs.pdf`: Battery specifications.  
   <img src="PX103035.jpg" alt="Battery" width="600">
-- `communication_protocol.md`: Details on I2C/SPI protocols used for sensor communication.
 - `motor_speed_calculations.jpg`: Motor speed calculations for selecting the 1500 RPM N20 motor based on wheel/tires sizes and the 3m x 3m game field.  
   <img src="motor_speed_calculations.jpg" alt="Motor Speed Calculations" width="600">
 - `image_processing_setup.jpg`: Setup for image processing.  
   <img src="image_processing_setup.jpg" alt="Image Processing Setup" width="600">
-- `obstacle_challenge_strategy_1.jpg`: Strategy diagram 1.  
-  <img src="obstacle_challenge_strategy_1.jpg" alt="Obstacle Strategy 1" width="600">
-- `obstacle_challenge_strategy_2.jpg`: Strategy diagram 2.  
-  <img src="obstacle_challenge_strategy_2.jpg" alt="Obstacle Strategy 2" width="600">
 - `design_to_life.jpg`: Design inspiration.  
   <img src="design_to_life.jpg" alt="Design to Life" width="600">
 - `soldering_setup.jpg`: Soldering setup for pertinax boards.  
   <img src="soldering_setup.jpg" alt="Soldering Setup" width="600">
-- `example_detection.jpg`: Example detection image.  
-  <img src="example_detection.jpg" alt="Example Detection" width="600">
 - `KLS7-TS1204.jpg`: Tactile switch image.  
   <img src="KLS7-TS1204.jpg" alt="Tactile Switch" width="600">
 - `transparent_only_logo_WRO2025_FE_ANTi_logo_05-05-2025.png`: Team ANTi logo.  

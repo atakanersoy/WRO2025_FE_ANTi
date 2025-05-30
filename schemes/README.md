@@ -1,6 +1,6 @@
 # Schemes Documentation
 
-This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Friday, May 30, 2025, at 12:37 AM +03**.
+This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Friday, May 30, 2025, at 04:57 AM +03**.
 
 ## Overview
 Our robot’s electronics are integrated on custom **pertinax boards** (perforated PCBs), meticulously cut to minimize size. All connections and soldering were performed by the team to ensure reliability and compactness. The system operates on three power lines:
@@ -8,41 +8,26 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
 - **+2V8A**: Powers the GC2145 camera and VL53L1X ToF sensor.
 - **+1V8**: Powers the microcontroller, camera, USB transceiver, and LSM6DSOX IMU.
 
-## Components
-| Component            | Description                                      |
-|----------------------|--------------------------------------------------|
-| STM32H747            | Dual-core, high-performance microcontroller      |
-| GC2145               | 2MP CMOS camera, 2.2mm focal length, 80° view    |
-| VL53L1X              | ToF sensor, 400cm range, full FoV                |
-| LSM6DSOX             | 6-axis accelerometer and gyroscope IMU           |
-| Feetech FS0307       | Submicro servo motor                             |
-| DRV8833              | PWM motor driver                                 |
-| 1500 RPM N20         | Motor with quadrature encoder (2 Hall-effect)    |
-| Power-Xtra PX103035  | 3.7V 1000mAh LiPo battery with PCM               |
-| LiPo Rider Plus      | USB-C charger/booster with power switch          |
-| SX1308               | 2A DC-DC Step-Up voltage booster                 |
-| BOB-12009            | 3.3V–5V logic level converter                   |
-| KLS7-TS1204          | Tactile switch (start action)                    |
-| LEGO 87697           | Tire, 21mm diameter, 12mm width                  |
-
 ## Schematics
 <img src="wiring_diagram.jpg" alt="Wiring Diagram" width="600">
 
 ### Bill of Materials (BOM) for Wiring Diagram
-| Component        | Quantity | Part Number       | Description                          |
-|------------------|----------|-------------------|--------------------------------------|
-| STM32H747        | 1        | STM32H747XI       | Microcontroller                     |
-| GC2145           | 1        | GC2145            | 2MP Camera                          |
-| VL53L1X          | 1        | VL53L1X           | ToF Sensor                          |
-| LSM6DSOX         | 1        | LSM6DSOX          | 6-axis IMU                          |
-| Feetech FS0307   | 1        | FS0307            | Servo Motor                         |
-| DRV8833          | 1        | DRV8833           | Motor Driver                        |
-| 1500 RPM N20     | 1        | N20-1500RPM       | DC Motor with Encoder               |
-| Power-Xtra PX103035 | 1     | PX103035          | 3.7V 1000mAh LiPo Battery           |
-| LiPo Rider Plus  | 1        | ETA9740_V1.1      | Charger/Booster                     |
-| SX1308           | 1        | SX1308            | Voltage Booster                     |
-| BOB-12009        | 1        | BOB-12009         | Logic Level Converter               |
-| KLS7-TS1204      | 1        | KLS7-TS1204       | Tactile Switch                      |
+| Component           | Quantity | Type                      | Description                                   |
+| ------------------- | -------- | ------------------------- | --------------------------------------------- |
+| STM32H747           | 1        | Microcontroller           | Dual-core, high-performance microcontroller   |
+| GC2145              | 1        | 2MP Camera                | 2MP CMOS camera, 2.2mm focal length, 80° view |
+| VL53L1X             | 1        | ToF Sensor                | ToF sensor, 400cm range, full FoV             |
+| LSM6DSOX            | 1        | 6-axis IMU                | 6-axis accelerometer and gyroscope IMU        |
+| Feetech FS0307      | 1        | Servo Motor               | Submicro servo motor                          |
+| DRV8833             | 1        | Motor Driver              | PWM motor driver                              |
+| 1500 RPM N20        | 1        | DC Motor with Encoder     | Motor with quadrature encoder (2 Hall-effect) |
+| Power-Xtra PX103035 | 1        | 3.7V 1000mAh LiPo Battery | 3.7V 1000mAh LiPo battery with PCM            |
+| LiPo Rider Plus     | 1        | Charger/Booster           | USB-C charger/booster with power switch       |
+| SX1308              | 1        | Voltage Booster           | 2A DC-DC Step-Up voltage booster              |
+| BOB-12009           | 1        | Logic Level Converter     | 3.3V–5V logic level converter                 |
+| KLS7-TS1204         | 1        | Tactile Switch            | Tactile switch (start action)                 |
+| LEGO 87697          | 1        | Tire                      | Tire, 21mm diameter, 12mm width               |
+
 
 <img src="both_uncut_pertinax_scheme.jpg" alt="Both Uncut Pertinax Boards" width="600">
 

@@ -9,7 +9,7 @@
 
 Welcome to the GitHub repository of **Team ANTi**, competing in the **World Robot Olympiad™ (WRO®) Future Engineers 2025** category. Our team, composed of students from Koç University, Türkiye, has designed a compact, innovative, and autonomous self-driving vehicle to tackle the dynamic challenges of the WRO 2025 competition. Our team name, **ANTi**, reflects our philosophy: like an **ANT**, our robot is exceptionally small yet highly capable, pushing the boundaries of minimalism in design. The "**ANT**i" signifies our competitive spirit, standing "versus the world" in pursuit of engineering excellence.
 
-Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Friday, May 30, 2025, at 04:36 AM +03**.
+Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Friday, May 30, 2025, at 05:21 AM +03**.
 
 ---
 
@@ -127,19 +127,27 @@ Team ANTi’s robot is a marvel of minimalism, measuring just **72mm (L) x 57mm 
 ---
 
 ## 🔧 Hardware Documentation <a id="hardware-documentation"></a>
+Our hardware is meticulously selected and integrated using custom **pertinax boards** for minimal size and weight. Below is a summary of all key components with images, followed by the complete Bill of Materials (BOM) for the wiring diagram.
+
+### Key Components
 | Component            | Description                                      | Image                                      |
 |----------------------|--------------------------------------------------|--------------------------------------------|
 | STM32H747            | Dual-core, high-performance microcontroller      | <img src="other/STM32H747.jpg" alt="STM32H747" width="600"> |
 | GC2145               | 2MP CMOS camera, 80° view angle, <1.0% distortion | <img src="other/GC2145.jpg" alt="GC2145 Camera" width="600"> |
 | VL53L1X              | ToF sensor, 400cm range, full FoV                | <img src="other/VL53L1X.jpg" alt="VL53L1X" width="600"> |
-| 1500 RPM N20         | Motor with encoder, selected for small size and speed | <img src="other/1500rpm_N20_dc_motor_encoder.jpg" alt="N20 Motor" width="600"> |
+| LSM6DSOX             | 6-axis accelerometer and gyroscope IMU           | <img src="other/LSM6DSOX.jpg" alt="LSM6DSOX" width="600"> |
 | Feetech FS0307       | Submicro servo motor, chosen for minimal size    | <img src="other/FS0307.jpg" alt="FS0307 Servo" width="600"> |
+| DRV8833              | PWM motor driver                                 | <img src="other/DRV8833.jpg" alt="DRV8833" width="600"> |
+| 1500 RPM N20         | Motor with encoder, selected for small size and speed | <img src="other/1500rpm_N20_dc_motor_encoder.jpg" alt="N20 Motor" width="600"> |
 | Power-Xtra PX103035  | 30x35x10mm, 1000mAh LiPo battery with PCM        | <img src="other/PX103035.jpg" alt="Battery" width="600"> |
+| LiPo Rider Plus      | USB-C charger/booster with power switch          | <img src="other/LiPo_Rider_Plus.jpg" alt="LiPo Rider Plus" width="600"> |
+| SX1308               | 2A DC-DC Step-Up voltage booster                 | <img src="other/SX1308.jpg" alt="SX1308" width="600"> |
+| BOB-12009            | 3.3V–5V logic level converter                    | <img src="other/BOB12009.jpg" alt="BOB-12009" width="600"> |
 | LEGO 87697           | Tire, 21mm diameter, 12mm width, good traction   | <img src="other/lego87697_wheel_comparison.jpg" alt="LEGO 87697 Wheel Comparison" width="600"> |
 
-Our hardware is meticulously selected and integrated using custom **pertinax boards** for minimal size and weight. Key details include:
-- **Motor Speed**: Selected based on calculations comparing wheel/tires sizes and motor speeds for the 3m x 3m game field, using minimum and maximum optimal voltages (see [motor_speed_calculations.jpg](other/motor_speed_calculations.jpg)).
-- **Battery Performance**: Run time of 4-5 hours, charge time ~45 minutes (max 10W at 2A, min 0.8W, total current ~200–250mA).
+### Additional Hardware Details
+- **Motor Speed**: Selected based on calculations comparing wheel/tire sizes and motor speeds for the 3m x 3m game field, using minimum and maximum optimal voltages (see [motor_speed_calculations.jpg](other/motor_speed_calculations.jpg)).
+- **Battery Performance**: Run time of 4–5 hours, charge time ~45 minutes (max 10W at 2A, min 0.8W, total current ~200–250mA).
 - **3D Printing**: Used for prototyping (see [models/3d_printer.jpg](models/3d_printer.jpg)).
 
 <img src="other/soldering_setup.jpg" alt="Soldering Setup" width="600">  
@@ -147,7 +155,26 @@ Our hardware is meticulously selected and integrated using custom **pertinax boa
 
 <img src="schemes/wiring_diagram.jpg" alt="Wiring Diagram" width="600">
 
-Detailed hardware specifications and schematics are available in [Schemes Documentation](schemes/README.md).
+### Bill of Materials (BOM) for Wiring Diagram
+The following BOM details all components used in the robot’s electrical system, as documented in the [Schemes Documentation](schemes/README.md):
+
+| Component           | Quantity | Type                      | Description                                   |
+|---------------------|----------|---------------------------|-----------------------------------------------|
+| STM32H747           | 1        | Microcontroller           | Dual-core, high-performance microcontroller   |
+| GC2145              | 1        | 2MP Camera                | 2MP CMOS camera, 2.2mm focal length, 80° view |
+| VL53L1X             | 1        | ToF Sensor                | ToF sensor, 400cm range, full FoV             |
+| LSM6DSOX            | 1        | 6-axis IMU                | 6-axis accelerometer and gyroscope IMU        |
+| Feetech FS0307      | 1        | Servo Motor               | Submicro servo motor                          |
+| DRV8833             | 1        | Motor Driver              | PWM motor driver                              |
+| 1500 RPM N20        | 1        | DC Motor with Encoder     | Motor with quadrature encoder (2 Hall-effect) |
+| Power-Xtra PX103035 | 1        | 3.7V 1000mAh LiPo Battery | 3.7V 1000mAh LiPo battery with PCM            |
+| LiPo Rider Plus     | 1        | Charger/Booster           | USB-C charger/booster with power switch       |
+| SX1308              | 1        | Voltage Booster           | 2A DC-DC Step-Up voltage booster              |
+| BOB-12009           | 1        | Logic Level Converter     | 3.3V–5V logic level converter                 |
+| KLS7-TS1204         | 1        | Tactile Switch            | Tactile switch (start action)                 |
+| LEGO 87697          | 1        | Tire                      | Tire, 21mm diameter, 12mm width               |
+
+For detailed schematics, power distribution, and wiring information, refer to the [Schemes Documentation](schemes/README.md).
 
 ---
 
@@ -211,7 +238,7 @@ Our robot’s mechanical design prioritizes compactness and durability:
   - **Speed**: The 1500 RPM N20 motor was chosen to achieve a target speed of ~0.3 m/s on the 3m x 3m track, calculated as: Speed = (RPM × Wheel Circumference) / 60, where wheel circumference = π × 21mm ≈ 66mm. Thus, Speed = (1500 × 0.066) / 60 ≈ 1.65 m/s, reduced to 0.3 m/s via PWM control for stability.
   - **Torque**: Estimated at ~0.02 Nm for the N20 motor at 3V, sufficient for the lightweight 100g robot on a flat track (Force = mass × acceleration, Torque = Force × wheel radius).
 - **Assembly Instructions**:
-  1. 3D print the chassis using ABS+ (files in [models/chassis.stl](models/chassis.stl)).
+  1. 3D print the chassis using ABS+ (files in [models/design_base.3mf](models/design_base.3mf)).
   2. Mount the N20 motor to the rear differential using M2 screws.
   3. Attach the Feetech FS0307 servo to the front steering mechanism.
   4. Secure pertinax boards with electronics to the chassis by sliding.
@@ -225,7 +252,7 @@ Detailed mechanical specifications are in [Models Documentation](models/README.m
 ---
 
 ## 📹 Performance Videos <a id="performance-videos"></a>
-Videos showcasing our robot’s performance in testing and competition scenarios are available in [Performance Videos](video/README.md). Both videos include autonomous robot movements doing key maneuvers, referencing [Hardware](#hardware-documentation), [Software](#software-documentation), and [Mechanical Characteristics](#mechanical-characteristics).
+Videos showcasing our robot’s performance in testing and competition scenarios are available in [Performance Videos](video/README.md). Both videos include autonomous robot movements doing key maneuvers, referencing [Hardware](#hardware-documentation), [Software](#software-documentation), and [Mechanical Characteristics](#mechanical-characteristics) in live action.
 
 - **Open Challenge**  
   [![Open Challenge Video](https://img.youtube.com/vi/-YdvKO5ceRc/0.jpg)](https://youtu.be/-YdvKO5ceRc)  
@@ -283,7 +310,7 @@ by the Free Software Foundation, either version 3 of the License, or
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
