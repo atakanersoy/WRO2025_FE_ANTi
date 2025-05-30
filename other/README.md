@@ -1,6 +1,6 @@
 # Other Resources
 
-This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
+This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Thursday, May 29, 2025, at 10:57 PM +03**.
 
 ## Resource List
 - `stm32h747_datasheet.pdf`: Microcontroller specifications.  
@@ -50,9 +50,12 @@ This folder contains supplementary materials for Team ANTi’s WRO 2025 Future E
   <img src="CAD_fusion_left_view.jpg" alt="CAD Left View" width="600">
 - `CAD_fusion_right_view.jpg`: CAD rendering of the right view.  
   <img src="CAD_fusion_right_view.jpg" alt="CAD Right View" width="600">
-- `lego87697_wheel_comparison.jpg`: Comparison image for LEGO 87697 tire selection.
+- `lego87697_wheel_comparison.jpg`: Comparison image for LEGO 87697 tire selection.  
+  <img src="lego87697_wheel_comparison.jpg" alt="LEGO 87697 Wheel Comparison" width="600">
 - `ANTi_wro_sim.png`: Simulation image from Webots, converted to physical work due to timeline constraints.  
   <img src="ANTi_wro_sim.png" alt="Webots Simulation" width="600">
+- `ackermann_steering_path.png`: Simulation of Ackermann steering path for a 90-degree turn.  
+  <img src="ackermann_steering_path.png" alt="Ackermann Steering Path" width="600">
 
 ## Notes
 - All datasheets are sourced from official manufacturer websites.

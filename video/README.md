@@ -1,6 +1,6 @@
 # Performance Videos
 
-This folder contains videos demonstrating Team ANTi’s robot performance in the WRO 2025 Future Engineers challenges. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
+This folder contains videos demonstrating Team ANTi’s autonomous robot performance in the WRO 2025 Future Engineers challenges. This documentation was last updated on **Thursday, May 29, 2025, at 10:57 PM +03**.
 
 ## Video List
 - **Open Challenge**  
@@ -16,8 +16,7 @@ This folder contains videos demonstrating Team ANTi’s robot performance in the
   *File*: [differential_test.mp4](differential_test.mp4)
 
 ## Notes
-- Videos for Open and Obstacle Challenges are uploaded to our [YouTube channel](https://www.youtube.com/@solipsy.) in high resolution (1080p or higher).
-- Each YouTube video includes timestamps or annotations for key maneuvers.
+- Videos for Open and Obstacle Challenges are uploaded to our [YouTube channel](https://www.youtube.com/@solipsy.) in high resolution (1080p or higher) and are publicly accessible.
 - Local video files are available for download in this folder.
 
 For robot details, see [Our Robot](../README.md#our-robot).

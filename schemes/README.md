@@ -1,6 +1,6 @@
 # Schemes Documentation
 
-This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
+This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Friday, May 30, 2025, at 12:37 AM +03**.
 
 ## Overview
 Our robot’s electronics are integrated on custom **pertinax boards** (perforated PCBs), meticulously cut to minimize size. All connections and soldering were performed by the team to ensure reliability and compactness. The system operates on three power lines:
@@ -9,21 +9,40 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
 - **+1V8**: Powers the microcontroller, camera, USB transceiver, and LSM6DSOX IMU.
 
 ## Components
-- **Microcontroller**: STM32H747 (dual-core, high-performance).
-- **Camera**: GC2145 (2MP CMOS, 2.2mm focal length, 80° view angle, <1.0% distortion).
-- **ToF Sensor**: VL53L1X (400cm range, full FoV).
-- **IMU**: LSM6DSOX (6-axis accelerometer and gyroscope).
-- **Servo**: Feetech FS0307 submicro servo.
-- **Motor Driver**: DRV8833 (PWM motor driver).
-- **Motor**: 1500 RPM N20 with quadrature encoder (2 Hall-effect sensors).
-- **Battery**: Power-Xtra PX103035 3.7V 1000mAh LiPo with PCM.
-- **Charger/Booster**: LiPo Rider Plus (Seeed Studio, USB-C charging, power switch).
-- **Voltage Booster**: SX1308 2A DC-DC Step-Up.
-- **Logic Level Converter**: BOB-12009 (3.3V–5V level shifter).
-- **Button**: KLS7-TS1204 tactile switch (start action).
+| Component            | Description                                      |
+|----------------------|--------------------------------------------------|
+| STM32H747            | Dual-core, high-performance microcontroller      |
+| GC2145               | 2MP CMOS camera, 2.2mm focal length, 80° view    |
+| VL53L1X              | ToF sensor, 400cm range, full FoV                |
+| LSM6DSOX             | 6-axis accelerometer and gyroscope IMU           |
+| Feetech FS0307       | Submicro servo motor                             |
+| DRV8833              | PWM motor driver                                 |
+| 1500 RPM N20         | Motor with quadrature encoder (2 Hall-effect)    |
+| Power-Xtra PX103035  | 3.7V 1000mAh LiPo battery with PCM               |
+| LiPo Rider Plus      | USB-C charger/booster with power switch          |
+| SX1308               | 2A DC-DC Step-Up voltage booster                 |
+| BOB-12009            | 3.3V–5V logic level converter                   |
+| KLS7-TS1204          | Tactile switch (start action)                    |
+| LEGO 87697           | Tire, 21mm diameter, 12mm width                  |
 
 ## Schematics
 <img src="wiring_diagram.jpg" alt="Wiring Diagram" width="600">
+
+### Bill of Materials (BOM) for Wiring Diagram
+| Component        | Quantity | Part Number       | Description                          |
+|------------------|----------|-------------------|--------------------------------------|
+| STM32H747        | 1        | STM32H747XI       | Microcontroller                     |
+| GC2145           | 1        | GC2145            | 2MP Camera                          |
+| VL53L1X          | 1        | VL53L1X           | ToF Sensor                          |
+| LSM6DSOX         | 1        | LSM6DSOX          | 6-axis IMU                          |
+| Feetech FS0307   | 1        | FS0307            | Servo Motor                         |
+| DRV8833          | 1        | DRV8833           | Motor Driver                        |
+| 1500 RPM N20     | 1        | N20-1500RPM       | DC Motor with Encoder               |
+| Power-Xtra PX103035 | 1     | PX103035          | 3.7V 1000mAh LiPo Battery           |
+| LiPo Rider Plus  | 1        | ETA9740_V1.1      | Charger/Booster                     |
+| SX1308           | 1        | SX1308            | Voltage Booster                     |
+| BOB-12009        | 1        | BOB-12009         | Logic Level Converter               |
+| KLS7-TS1204      | 1        | KLS7-TS1204       | Tactile Switch                      |
 
 <img src="both_uncut_pertinax_scheme.jpg" alt="Both Uncut Pertinax Boards" width="600">
 
@@ -35,9 +54,17 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
   - +1V8: Low-power components like the IMU and USB transceiver.
 - **Battery Performance**:
   - Capacity: 1000mAh.
-  - Run Time: ~4–5 hours (calculated based on component current draw).
+  - Run Time: ~4–5 hours.
   - Charge Time: ~45 minutes (max 10W at 2A, 0.8W when fully charged).
-  - Formula: Run time = Capacity (mAh) / Total Current (mA). Total current estimated at ~200–250mA based on component specs.
+  - Formula: Run time = Capacity (mAh) / Total Current (mA).
+- **Power Consumption Breakdown**:
+  - STM32H747: ~50mA at 3V1.
+  - GC2145 Camera: ~80mA at 2V8A.
+  - VL53L1X ToF: ~20mA at 2V8A.
+  - LSM6DSOX IMU: ~5mA at 1V8.
+  - Feetech FS0307 Servo: ~40mA at 3V1 (active).
+  - 1500 RPM N20 Motor: ~60mA at 3V1.
+  - Total Estimated Current: ~255mA (varies with activity).
 
 ### Wiring
 - All connections are soldered on pertinax boards, cut to fit the 72mm x 57mm chassis.
@@ -50,18 +77,31 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
 - **Power Efficiency**: The 1000mAh battery was selected for extended trial time, exceeding the 3-minute competition round.
 
 ## Datasheet List
-- `BOB-12009.pdf`: Logic level converter specifications.
-- `drv8833.pdf`: Motor driver specifications.
-- `FS0307-specs.pdf`: Servo motor specifications.
-- `GC2145.pdf`: Camera sensor details.
-- `kls7-ts1204.pdf`: Tactile switch specifications.
-- `LiPoRiderPlus_ETA9740_V1.1.pdf`: Charger/booster ETA specifications.
-- `LiPoRiderPlus_SCH.pdf`: Charger/booster schematic.
-- `lsm6dsox.pdf`: IMU specifications.
-- `N20_motors.pdf`: N20 motor and encoder details.
-- `stm32h747.pdf`: Microcontroller specifications.
-- `SX1308.pdf`: Voltage booster specifications.
-- `vl53l1x.pdf`: ToF sensor specifications.
-- `wiring_diagram.jpg`: Wiring diagram image.
+- [BOB-12009.pdf](BOB-12009.pdf): Logic level converter specifications.
+- [drv8833.pdf](drv8833.pdf): Motor driver specifications.
+- [FS0307-specs.pdf](FS0307-specs.pdf): Servo motor specifications.
+- [GC2145.pdf](GC2145.pdf): Camera sensor details.
+- [kls7-ts1204.pdf](kls7-ts1204.pdf): Tactile switch specifications.
+- [LiPoRiderPlus_ETA9740_V1.1.pdf](LiPoRiderPlus_ETA9740_V1.1.pdf): Charger/booster ETA specifications.
+- [LiPoRiderPlus_SCH.pdf](LiPoRiderPlus_SCH.pdf): Charger/booster schematic.
+- [lsm6dsox.pdf](lsm6dsox.pdf): IMU specifications.
+- [N20_motors.pdf](N20_motors.pdf): N20 motor and encoder details.
+- [stm32h747.pdf](stm32h747.pdf): Microcontroller specifications.
+- [SX1308.pdf](SX1308.pdf): Voltage booster specifications.
+- [vl53l1x.pdf](vl53l1x.pdf): ToF sensor specifications.
+- [wiring_diagram.jpg](wiring_diagram.jpg): Wiring diagram image.
 
-For component datasheets, see [Other Resources](../other/README.md).
+## Component Selection Details
+- **STM32H747**: Chosen for its dual-core performance, enabling parallel processing of vision and control tasks.
+- **GC2145**: Selected for its 80° view angle and low distortion, ideal for track detection.
+- **VL53L1X**: Offers 400cm range for obstacle avoidance in dynamic environments.
+- **LSM6DSOX**: Provides 6-axis stabilization for precise navigation.
+- **Feetech FS0307**: Picked for its submicro size after testing larger servos (MG90S, SG90).
+- **DRV8833**: Ensures efficient motor control with PWM support.
+- **1500 RPM N20**: Chosen for small size and speed, validated by motor speed calculations.
+- **Power-Xtra PX103035**: Selected for its compact 1000mAh capacity, supporting 4-5 hours of operation.
+- **LiPo Rider Plus**: Provides reliable charging and power switching in a small form factor.
+- **SX1308**: Boosts voltage efficiently for all components.
+- **BOB-12009**: Ensures compatibility between 3.3V and 5V systems.
+- **KLS7-TS1204**: Simple tactile switch for reliable start action.
+- **LEGO 87697**: Opted for its 21mm diameter and 12mm width, offering good traction with a center ridge (see [other/lego87697_wheel_comparison.jpg](other/lego87697_wheel_comparison.jpg) for selection comparison).

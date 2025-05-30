@@ -9,7 +9,7 @@
 
 Welcome to the GitHub repository of **Team ANTi**, competing in the **World Robot Olympiad™ (WRO®) Future Engineers 2025** category. Our team, composed of students from Koç University, Türkiye, has designed a compact, innovative, and autonomous self-driving vehicle to tackle the dynamic challenges of the WRO 2025 competition. Our team name, **ANTi**, reflects our philosophy: like an **ANT**, our robot is exceptionally small yet highly capable, pushing the boundaries of minimalism in design. The "**ANT**i" signifies our competitive spirit, standing "versus the world" in pursuit of engineering excellence.
 
-Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
+Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Friday, May 30, 2025, at 04:36 AM +03**.
 
 ---
 
@@ -25,12 +25,12 @@ Our mission was to create the smallest possible robot for the WRO 2025 challenge
 - [📸 Team Photos](#team-photos)
 - [🚗 Vehicle Photos](#vehicle-photos)
 - [🛠 Other Resources](#other-resources)
+- [🌐 GitHub Utilization](#github-utilization)
 - [📜 License](#license)
 
 ---
 
 ## 📂 Folder Structure <a id="folder-structure"></a>
-
 ```
 📦 WRO2025_FE_ANTi
 ├── 📁 models                # 3D CAD models for printing and CNC
@@ -55,8 +55,7 @@ Detailed documentation for each folder is available in respective `.md` files:
 ---
 
 ## 👥 The Team <a id="the-team"></a>
-
-Team ANTi comprises three passionate students from Koç University, Türkiye, guided by an experienced coach. Each member brings unique skills to the project, from electronics to computer vision.
+Team ANTi includes three passionate students from Koç University, Türkiye, guided by a coach. Each member brings unique skills to the project, from electronics to computer vision.
 
 <img src="t-photos/workplace.jpg" alt="Team ANTi at Work" width="600">
 <img src="t-photos/team_fun.jpg" alt="Team Fun Moment" width="600">
@@ -88,7 +87,6 @@ Team ANTi comprises three passionate students from Koç University, Türkiye, gu
 ---
 
 ## 🎯 Challenge Overview <a id="challenge-overview"></a>
-
 The **WRO 2025 Future Engineers** category challenges teams to build an autonomous self-driving vehicle capable of navigating dynamic racetracks. The competition consists of two rounds:
 
 ### Open Challenge
@@ -118,7 +116,6 @@ This challenge fosters innovation in STEM and robotics, encouraging students to 
 ---
 
 ## 🤖 Our Robot <a id="our-robot"></a>
-
 <img src="v-photos/front_view.jpg" alt="ANTi Robot Front View" width="600">
 
 Team ANTi’s robot is a marvel of minimalism, measuring just **72mm (L) x 57mm (W) x 58mm (H)**, making it one of the smallest vehicles ever designed for the WRO Future Engineers category. Built entirely from scratch, our robot features a **3D-printed chassis** and a **print-in-place Ackermann steering mechanism**, optimized for precision and small size. Powered by a **1500 RPM N20 motor** and controlled by an **STM32H747 dual-core microcontroller**, it leverages advanced sensors like the **GC2145 2MP camera** and **VL53L1X ToF sensor** for robust navigation. Our design philosophy, inspired by the efficiency of an ant, pushes the boundaries of compact robotics while maintaining high performance.
@@ -130,22 +127,20 @@ Team ANTi’s robot is a marvel of minimalism, measuring just **72mm (L) x 57mm 
 ---
 
 ## 🔧 Hardware Documentation <a id="hardware-documentation"></a>
+| Component            | Description                                      | Image                                      |
+|----------------------|--------------------------------------------------|--------------------------------------------|
+| STM32H747            | Dual-core, high-performance microcontroller      | <img src="other/STM32H747.jpg" alt="STM32H747" width="600"> |
+| GC2145               | 2MP CMOS camera, 80° view angle, <1.0% distortion | <img src="other/GC2145.jpg" alt="GC2145 Camera" width="600"> |
+| VL53L1X              | ToF sensor, 400cm range, full FoV                | <img src="other/VL53L1X.jpg" alt="VL53L1X" width="600"> |
+| 1500 RPM N20         | Motor with encoder, selected for small size and speed | <img src="other/1500rpm_N20_dc_motor_encoder.jpg" alt="N20 Motor" width="600"> |
+| Feetech FS0307       | Submicro servo motor, chosen for minimal size    | <img src="other/FS0307.jpg" alt="FS0307 Servo" width="600"> |
+| Power-Xtra PX103035  | 30x35x10mm, 1000mAh LiPo battery with PCM        | <img src="other/PX103035.jpg" alt="Battery" width="600"> |
+| LEGO 87697           | Tire, 21mm diameter, 12mm width, good traction   | <img src="other/lego87697_wheel_comparison.jpg" alt="LEGO 87697 Wheel Comparison" width="600"> |
 
-Our hardware is meticulously selected and integrated using custom **pertinax boards** for minimal size and weight. Key components include:
-
-- **Microcontroller**: STM32H747 (dual-core, high-performance).  
-  <img src="other/STM32H747.jpg" alt="STM32H747" width="600">
-- **Camera**: GC2145 (2MP CMOS, 80° view angle, <1.0% distortion).  
-  <img src="other/GC2145.jpg" alt="GC2145 Camera" width="600">
-- **ToF Sensor**: VL53L1X (400cm range, full FoV).  
-  <img src="other/VL53L1X.jpg" alt="VL53L1X" width="600">
-- **Motor**: 1500 RPM N20 with encoder, selected for its small size and fast speed. Speed was determined by calculating and comparing different wheel/tires sizes and motor speeds for the 3m x 3m game field, using minimum and maximum optimal voltages to set the maximum speed (see [motor_speed_calculations.jpg](other/motor_speed_calculations.jpg)).  
-  <img src="other/1500rpm_N20_dc_motor_encoder.jpg" alt="N20 Motor" width="600">
-- **Servo**: Feetech FS0307 submicro servo motor, chosen for its minimal size after testing MG90S and SG90 servos.  
-  <img src="other/FS0307.jpg" alt="FS0307 Servo" width="600">
-- **Battery**: Power-Xtra PX103035 (30x35x10mm, 1000mAh), selected for its minimal size and capacity, lasting far more than the 3-minute round time, with 1000mAh chosen for long trial time. Run time calculated as Run Time = Capacity (mAh) / Total Current (mA), with approximate run time of 4-5 hours and full charge time of ~45 minutes (max 10W at 2A, min 0.8W when fully charged, total current estimated at ~200–250mA).  
-  <img src="other/PX103035.jpg" alt="Battery" width="600">
-- **Tires**: LEGO 87697, chosen for their small size, suitability, good performance, and traction, with a diameter of 21mm, width of 12mm, and a circumferential center ridge compared to similar parts.
+Our hardware is meticulously selected and integrated using custom **pertinax boards** for minimal size and weight. Key details include:
+- **Motor Speed**: Selected based on calculations comparing wheel/tires sizes and motor speeds for the 3m x 3m game field, using minimum and maximum optimal voltages (see [motor_speed_calculations.jpg](other/motor_speed_calculations.jpg)).
+- **Battery Performance**: Run time of 4-5 hours, charge time ~45 minutes (max 10W at 2A, min 0.8W, total current ~200–250mA).
+- **3D Printing**: Used for prototyping (see [models/3d_printer.jpg](models/3d_printer.jpg)).
 
 <img src="other/soldering_setup.jpg" alt="Soldering Setup" width="600">  
 *Our soldering setup for assembling the pertinax boards.*
@@ -157,22 +152,71 @@ Detailed hardware specifications and schematics are available in [Schemes Docume
 ---
 
 ## 💻 Software Documentation <a id="software-documentation"></a>
-
 Our software is written in **MicroPython** and runs on the STM32H747. It uses the **CIELAB color space** for robust computer vision, enabling precise differentiation of track elements and traffic signs. The software integrates sensor data (camera, ToF, IMU) for navigation and control, with algorithms optimized for the dynamic WRO racetrack.
 
 <img src="other/image_processing_setup.jpg" alt="Image Processing Setup" width="600">
+
+### Obstacle Navigation Strategy
+Our robot navigates the obstacle course using a combination of sensor fusion and computer vision:
+- **Traffic Sign Detection**: The GC2145 camera detects red/green signs using CIELAB color space. Red signs trigger a right-lane adjustment, green signs a left-lane adjustment.
+- **Obstacle Avoidance**: The VL53L1X ToF sensor provides distance data to detect obstacles, adjusting the robot’s path.
+- **Parallel Parking**: After three laps, the robot uses ToF and camera data to locate the parking zone and execute a precomputed trajectory (see [parallel_park_setup.jpg](src/parallel_park_setup.jpg)).
+
+#### Navigation Flow Diagram
+1. Start → Initialize sensors (Camera, ToF, IMU).
+2. Loop:
+   - Capture camera frame → Detect track and signs using CIELAB.
+   - If sign detected:
+     - Red → Adjust steering to right.
+     - Green → Adjust steering to left.
+   - Read ToF distance → If obstacle < 10cm, adjust path.
+   - Update steering and speed via PID control.
+3. After 3 laps → Locate parking zone → Execute parking maneuver.
+
+#### Pseudocode for Obstacle Challenge
+```
+WHILE True:
+    frame = camera.capture()
+    signs = detect_signs(frame, color_space="CIELAB")
+    distance = tof.read_distance()
+    
+    IF signs.contains("red"):
+        steering.adjust(right=True)
+    ELSE IF signs.contains("green"):
+        steering.adjust(left=True)
+    
+    IF distance < 10:
+        steering.avoid_obstacle(distance)
+    
+    IF laps == 3:
+        parking_zone = locate_parking_zone(frame, distance)
+        execute_parking(parking_zone)
+        BREAK
+    
+    control.update_pid(steering, speed)
+```
 
 See [Software Documentation](src/README.md) for details on algorithms, libraries, and code structure.
 
 ---
 
 ## ⚙ Mechanical Characteristics <a id="mechanical-characteristics"></a>
-
 Our robot’s mechanical design prioritizes compactness and durability:
 - **Dimensions**: 72mm (L) x 57mm (W) x 58mm (H).
 - **Chassis**: 3D-printed ABS+ with print-in-place Ackermann steering.
 - **Differential**: Custom 4-gear mechanical differential.
 - **Tires**: LEGO 87697 (21mm diameter, 12mm width), selected for their small size, suitability, good performance, and traction, featuring a circumferential center ridge compared to similar parts.
+- **Wheel Rotation Limits**: Mechanically limited to -35° to +25° per wheel, an asymmetry derived from Ackermann steering design, ensuring each wheel points toward the same circular center point for smooth turns.
+- **Engineering Principles**:
+  - **Speed**: The 1500 RPM N20 motor was chosen to achieve a target speed of ~0.3 m/s on the 3m x 3m track, calculated as: Speed = (RPM × Wheel Circumference) / 60, where wheel circumference = π × 21mm ≈ 66mm. Thus, Speed = (1500 × 0.066) / 60 ≈ 1.65 m/s, reduced to 0.3 m/s via PWM control for stability.
+  - **Torque**: Estimated at ~0.02 Nm for the N20 motor at 3V, sufficient for the lightweight 100g robot on a flat track (Force = mass × acceleration, Torque = Force × wheel radius).
+- **Assembly Instructions**:
+  1. 3D print the chassis using ABS+ (files in [models/chassis.stl](models/chassis.stl)).
+  2. Mount the N20 motor to the rear differential using M2 screws.
+  3. Attach the Feetech FS0307 servo to the front steering mechanism.
+  4. Secure pertinax boards with electronics to the chassis by sliding.
+  5. Install LEGO 87697 tires and bearings on all four wheels.
+- **CAD Files**: Available at [models/design_base.3mf](models/design_base.3mf) and [models/4_gear_design_mini_differential.3mf](models/4_gear_design_mini_differential.3mf) for replication or modification.
 
 <img src="other/CAD_fusion_right_view.jpg" alt="CAD Fusion Right View" width="600">
 
@@ -181,19 +225,19 @@ Detailed mechanical specifications are in [Models Documentation](models/README.m
 ---
 
 ## 📹 Performance Videos <a id="performance-videos"></a>
-
-Videos showcasing our robot’s performance in testing and competition scenarios are available in [Performance Videos](video/README.md).
+Videos showcasing our robot’s performance in testing and competition scenarios are available in [Performance Videos](video/README.md). Both videos include autonomous robot movements doing key maneuvers, referencing [Hardware](#hardware-documentation), [Software](#software-documentation), and [Mechanical Characteristics](#mechanical-characteristics).
 
 - **Open Challenge**  
-  [![Open Challenge Video](https://img.youtube.com/vi/-YdvKO5ceRc/0.jpg)](https://youtu.be/-YdvKO5ceRc)
+  [![Open Challenge Video](https://img.youtube.com/vi/-YdvKO5ceRc/0.jpg)](https://youtu.be/-YdvKO5ceRc)  
+  *Demonstrates autonomous navigation and speed control on a dynamic track.*
 
 - **Obstacle Challenge**  
-  [![Obstacle Challenge Video](https://img.youtube.com/vi/v3pcT7mglxo/0.jpg)](https://youtu.be/v3pcT7mglxo)
+  [![Obstacle Challenge Video](https://img.youtube.com/vi/v3pcT7mglxo/0.jpg)](https://youtu.be/v3pcT7mglxo)  
+  *Shows traffic sign detection, obstacle avoidance, and parallel parking.*
 
 ---
 
 ## 📸 Team Photos <a id="team-photos"></a>
-
 Official and informal photos of Team ANTi are available in [Team Photos](t-photos/README.md).
 
 <img src="t-photos/team_official.jpg" alt="Team ANTi Official Photo" width="600">
@@ -201,7 +245,6 @@ Official and informal photos of Team ANTi are available in [Team Photos](t-photo
 ---
 
 ## 🚗 Vehicle Photos <a id="vehicle-photos"></a>
-
 Detailed photos of our robot from all angles (top, bottom, front, back, left, right) are in [Vehicle Photos](v-photos/README.md).
 
 <img src="v-photos/top_view.jpg" alt="ANTi Robot Top View" width="600">
@@ -209,13 +252,23 @@ Detailed photos of our robot from all angles (top, bottom, front, back, left, ri
 ---
 
 ## 🛠 Other Resources <a id="other-resources"></a>
-
 Additional resources, including datasheets, communication protocols, and custom PCB details, are in [Other Resources](other/README.md).
+
+- `ackermann_steering_path.png`: Simulation of our own Ackermann steering design path for a 90-degree turn.  
+  <img src="other/ackermann_steering_path.png" alt="Ackermann Steering Path" width="600">
+
+---
+
+## 🌐 GitHub Utilization <a id="github-utilization"></a>
+We leveraged GitHub as our central platform for version control, project management, and public sharing, while maintaining a clean and professional repository history:
+- **Development Workflow**: We worked on local computers directly connected to our GitHub repository. To keep our repository history clean and avoid overcommitting, we committed changes only at significant milestones (e.g., completing the chassis design, integrating the vision system, finalizing obstacle navigation). Locally, we used sub-folders like `vision` and `steering` to develop features, when committing merging them into our local main branch before pushing polished updates to the public repository.
+- **Commit Frequency**: From March to May 2025, we achieved 10 major milestones, resulting in 10 commits to the public repository, averaging ~1 commits per week. Each commit represents a significant, well-documented update, such as "Completed sensor tests" or "Updated README docs".
+- **File Sharing and Public Updates**: All project assets—CAD files (`models/`), schematics (`schemes/`), source code (`src/`), and documentation—are shared publicly at each milestone. Before pushing updates, we cleaned up our progress, data, and results to ensure the public repository reflects a safer and smoother development process than our local workflow, making it easier for others to understand and replicate. Additionally, we record the date and time of the last updates in the README documents, providing easy access to the commit date and version.
+- **Supporting Others and Future Development**: While we do not want others to simply copy our work for private or closed-source use, we intentionally chose the AGPL-3.0 license to ensure that any future developments based on our code, robot design, hardware system, or overall architecture remain open-source. This strong copyleft license guarantees that improvements or adaptations — whether for competition, education, or research — must also be shared with the community. We are inviting others to replicate, modify, or build upon our work. The modular design of our system and detailed documentation make it easy to adapt the robot for different challenges. Contributions and suggestions — such as adding multi-robot coordination or advanced path-planning — are welcome via GitHub issues.
 
 ---
 
 ## 📜 License <a id="license"></a>
-
 This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)** to ensure all developments remain publicly accessible, fostering open collaboration and innovation.
 
 ```
