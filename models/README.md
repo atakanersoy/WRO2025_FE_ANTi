@@ -1,13 +1,13 @@
 # Models Documentation
 
-This folder contains the 3D CAD models used for designing and manufacturing Team ANTi’s robot for the WRO 2025 Future Engineers category. This documentation was last updated on **Thursday, May 29, 2025, at 08:35 PM +03**.
+This folder contains the 3D CAD models used for designing and manufacturing Team ANTi’s robot for the WRO 2025 Future Engineers category. This documentation was last updated on **Tuesday, June 10, 2025, at 02:15 PM +03**.
 
 ## Design Overview
 All components of our robot, including the chassis, wheel axles, rims, motor mounts, and differential gears, were designed using **Autodesk Fusion 360**. This professional CAD software allowed us to create precise models optimized for **Fused Filament Fabrication (FFF/FDM)** 3D printing, with some exploration into other techniques like **Stereolithography (SLA)** and **Continuous Fiber Reinforcement (CFR)**.
 
 ### Key Design Features
 - **Print-in-Place Ackermann Steering**: The steering mechanism uses a shorter linkage connecting the two front wheels, designed to be printed as a single unit for small size and precision.
-- **Compact Chassis**: Dimensions of 72mm (L) x 57mm (W) x 58mm (H), with sliders and holders for all components (pertinax board, servo, motor, battery).
+- **Compact Chassis**: Dimensions of 72mm (L) x 57mm (W) x 58mm (H), with sliders and holders for all components (pertinax board, servo, motor, battery). The total weight is 110g.
 - **Differential**: A custom 4-gear mechanical differential distributes power from the motor to the rear wheels.
 - **Bearings**: Four bearings, one for each wheel, ensure smooth rotation and reduced friction.
 

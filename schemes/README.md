@@ -1,6 +1,6 @@
 # Schemes Documentation
 
-This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Friday, May 30, 2025, at 04:57 AM +03**.
+This folder contains the electrical schematics and wiring details for Team ANTi’s WRO 2025 Future Engineers robot. This documentation was last updated on **Tuesday, June 10, 2025, at 02:18 PM +03**.
 
 ## Overview
 Our robot’s electronics are integrated on custom **pertinax boards** (perforated PCBs), meticulously cut to minimize size. All connections and soldering were performed by the team to ensure reliability and compactness. The system operates on three power lines:
@@ -26,7 +26,7 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
 | SX1308              | 1        | Voltage Booster           | 2A DC-DC Step-Up voltage booster              |
 | BOB-12009           | 1        | Logic Level Converter     | 3.3V–5V logic level converter                 |
 | KLS7-TS1204         | 1        | Tactile Switch            | Tactile switch (start action)                 |
-| LEGO 87697          | 1        | Tire                      | Tire, 21mm diameter, 12mm width               |
+| LEGO 87697          | 4        | Tire                      | Tire, 21mm diameter, 12mm width               |
 
 
 <img src="both_uncut_pertinax_scheme.jpg" alt="Both Uncut Pertinax Boards" width="600">
@@ -57,7 +57,7 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
 - Micro USB is used for programming, separate from the USB-C charging port.
 
 ## Design Considerations
-- **Compactness**: Pertinax boards were chosen over traditional PCBs to reduce size and weight.
+- **Compactness**: Pertinax boards were selected for their ease of manual production, avoiding external PCB fabrication time and cost.
 - **Reliability**: Hand-soldered connections ensure robust electrical performance.
 - **Power Efficiency**: The 1000mAh battery was selected for extended trial time, exceeding the 3-minute competition round.
 
@@ -89,4 +89,4 @@ Our robot’s electronics are integrated on custom **pertinax boards** (perforat
 - **SX1308**: Boosts voltage efficiently for all components.
 - **BOB-12009**: Ensures compatibility between 3.3V and 5V systems.
 - **KLS7-TS1204**: Simple tactile switch for reliable start action.
-- **LEGO 87697**: Opted for its 21mm diameter and 12mm width, offering good traction with a center ridge (see [other/lego87697_wheel_comparison.jpg](other/lego87697_wheel_comparison.jpg) for selection comparison).
+- **LEGO 87697**: Opted for its 21mm diameter and 12mm width, offering good traction with a center ridge (see [comparison image](../other/lego87697_wheel_comparison.jpg) for selection comparison).

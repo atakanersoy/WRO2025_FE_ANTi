@@ -1,6 +1,6 @@
 # Other Resources
 
-This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Friday, May 30, 2025, at 05:10 AM +03**.
+This folder contains supplementary materials for Team ANTi’s WRO 2025 Future Engineers robot, including datasheets, communication protocols, and other documentation. This documentation was last updated on **Tuesday, June 10, 2025, at 02:37 PM +03**.
 
 ## Resource List
 - `stm32h747_datasheet.pdf`: Microcontroller specifications.  
@@ -38,11 +38,11 @@ This folder contains supplementary materials for Team ANTi’s WRO 2025 Future E
 - `transparent_only_logo_WRO2025_FE_ANTi_logo_05-05-2025.png`: Team ANTi logo.  
   <img src="transparent_only_logo_WRO2025_FE_ANTi_logo_05-05-2025.png" alt="Team ANTi Logo" width="600">
 - `CAD_fusion_bottom_view.jpg`: CAD rendering of the bottom view.  
-  <img src="CAD_fusion_bottom_view.jpg" alt="CAD Bottom View" width="600">
+  updating... for international tournament
 - `CAD_fusion_left_view.jpg`: CAD rendering of the left view.  
-  <img src="CAD_fusion_left_view.jpg" alt="CAD Left View" width="600">
+  updating... for international tournament
 - `CAD_fusion_right_view.jpg`: CAD rendering of the right view.  
-  <img src="CAD_fusion_right_view.jpg" alt="CAD Right View" width="600">
+  updating... for international tournament
 - `lego87697_wheel_comparison.jpg`: Comparison image for LEGO 87697 tire selection.  
   <img src="lego87697_wheel_comparison.jpg" alt="LEGO 87697 Wheel Comparison" width="600">
 - `ANTi_wro_sim.png`: Simulation image from Webots, converted to physical work due to timeline constraints.  

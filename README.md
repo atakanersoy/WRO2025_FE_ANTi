@@ -9,7 +9,7 @@
 
 Welcome to the GitHub repository of **Team ANTi**, competing in the **World Robot Olympiad™ (WRO®) Future Engineers 2025** category. Our team, composed of students from Koç University, Türkiye, has designed a compact, innovative, and autonomous self-driving vehicle to tackle the dynamic challenges of the WRO 2025 competition. Our team name, **ANTi**, reflects our philosophy: like an **ANT**, our robot is exceptionally small yet highly capable, pushing the boundaries of minimalism in design. The "**ANT**i" signifies our competitive spirit, standing "versus the world" in pursuit of engineering excellence.
 
-Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Friday, May 30, 2025, at 05:21 AM +03**.
+Our mission was to create the smallest possible robot for the WRO 2025 challenge, leveraging our expertise in electrical, mechanical, and software engineering to test the limits of the 3m x 3m game field. Guided by our vision to **"never stop developing unless we stop learning,"** we’ve crafted a vehicle that showcases precision, adaptability, and a milestone in compact robotics design on a global scale. This documentation was last updated on **Monday, June 16, 2025, at 07:50 AM +03**.
 
 ---
 
@@ -55,33 +55,23 @@ Detailed documentation for each folder is available in respective `.md` files:
 ---
 
 ## 👥 The Team <a id="the-team"></a>
-Team ANTi includes three passionate students from Koç University, Türkiye, guided by a coach. Each member brings unique skills to the project, from electronics to computer vision.
+Team ANTi includes passionate students from Koç University, Türkiye, guided by a coach. Each member brings unique skills to the project, from electronics to computer vision.
 
 <img src="t-photos/workplace.jpg" alt="Team ANTi at Work" width="600">
-<img src="t-photos/team_fun.jpg" alt="Team Fun Moment" width="600">
+updating...
 
 ### Members
 - **Atakan Ersoy** (Team Leader)  
   *Role*: Electronics, Mechanical Design, Software, Strategy Integration  
-  *Background*: Freshman, Electrical and Electronics Engineering, Koç University (2025)  
+  *Background*: Sophomore, Electrical and Electronics Engineering, Koç University (2025)  
   *Contact*: [atakan@atakanersoy.com](mailto:atakan@atakanersoy.com), [aersoy24@ku.edu.tr](mailto:aersoy24@ku.edu.tr)  
   *Born*: 2006, Türkiye
-- **Yusuf Öztürk**  
-  *Role*: Mechanical Design, Strategy  
-  *Background*: Freshman, Physics, Koç University (2025)  
-  *Contact*: [yozturk24@ku.edu.tr](mailto:yozturk24@ku.edu.tr)  
-  *Born*: 2006, Türkiye
-- **Yusuf Bayram**  
-  *Role*: Computer Vision Research  
-  *Background*: Freshman, Computer Engineering, Koç University (2025)  
-  *Contact*: [ybayram24@ku.edu.tr](mailto:ybayram24@ku.edu.tr)  
-  *Born*: 2006, Türkiye
+- ...
 
 ### Coach
 - **Ali Aral Eren**  
   *Role*: Team Coach, Connector  
-  *Background*: Senior, Electrical and Electronics Engineering, Koç University (2025)  
-  *Contact*: [alieren21@ku.edu.tr](mailto:alieren21@ku.edu.tr)  
+  *Background*: Alumni, Electrical and Electronics Engineering, Koç University (2025)  
   *Born*: 2003, Türkiye
 
 ---
@@ -116,7 +106,8 @@ This challenge fosters innovation in STEM and robotics, encouraging students to 
 ---
 
 ## 🤖 Our Robot <a id="our-robot"></a>
-<img src="v-photos/front_view.jpg" alt="ANTi Robot Front View" width="600">
+
+updating... for international tournament
 
 Team ANTi’s robot is a marvel of minimalism, measuring just **72mm (L) x 57mm (W) x 58mm (H)**, making it one of the smallest vehicles ever designed for the WRO Future Engineers category. Built entirely from scratch, our robot features a **3D-printed chassis** and a **print-in-place Ackermann steering mechanism**, optimized for precision and small size. Powered by a **1500 RPM N20 motor** and controlled by an **STM32H747 dual-core microcontroller**, it leverages advanced sensors like the **GC2145 2MP camera** and **VL53L1X ToF sensor** for robust navigation. Our design philosophy, inspired by the efficiency of an ant, pushes the boundaries of compact robotics while maintaining high performance.
 
@@ -172,7 +163,7 @@ The following BOM details all components used in the robot’s electrical system
 | SX1308              | 1        | Voltage Booster           | 2A DC-DC Step-Up voltage booster              |
 | BOB-12009           | 1        | Logic Level Converter     | 3.3V–5V logic level converter                 |
 | KLS7-TS1204         | 1        | Tactile Switch            | Tactile switch (start action)                 |
-| LEGO 87697          | 1        | Tire                      | Tire, 21mm diameter, 12mm width               |
+| LEGO 87697          | 4        | Tire                      | Tire, 21mm diameter, 12mm width               |
 
 For detailed schematics, power distribution, and wiring information, refer to the [Schemes Documentation](schemes/README.md).
 
@@ -186,6 +177,7 @@ Our software is written in **MicroPython** and runs on the STM32H747. It uses th
 ### Obstacle Navigation Strategy
 Our robot navigates the obstacle course using a combination of sensor fusion and computer vision:
 - **Traffic Sign Detection**: The GC2145 camera detects red/green signs using CIELAB color space. Red signs trigger a right-lane adjustment, green signs a left-lane adjustment.
+<img src="src/example_detection.jpg" alt="Example Detection" width="600">
 - **Obstacle Avoidance**: The VL53L1X ToF sensor provides distance data to detect obstacles, adjusting the robot’s path.
 - **Parallel Parking**: After three laps, the robot uses ToF and camera data to locate the parking zone and execute a precomputed trajectory (see [parallel_park_setup.jpg](src/parallel_park_setup.jpg)).
 
@@ -230,6 +222,7 @@ See [Software Documentation](src/README.md) for details on algorithms, libraries
 ## ⚙ Mechanical Characteristics <a id="mechanical-characteristics"></a>
 Our robot’s mechanical design prioritizes compactness and durability:
 - **Dimensions**: 72mm (L) x 57mm (W) x 58mm (H).
+- **Total Weight**: 110g.
 - **Chassis**: 3D-printed ABS+ with print-in-place Ackermann steering.
 - **Differential**: Custom 4-gear mechanical differential.
 - **Tires**: LEGO 87697 (21mm diameter, 12mm width), selected for their small size, suitability, good performance, and traction, featuring a circumferential center ridge compared to similar parts.
@@ -245,7 +238,7 @@ Our robot’s mechanical design prioritizes compactness and durability:
   5. Install LEGO 87697 tires and bearings on all four wheels.
 - **CAD Files**: Available at [models/design_base.3mf](models/design_base.3mf) and [models/4_gear_design_mini_differential.3mf](models/4_gear_design_mini_differential.3mf) for replication or modification.
 
-<img src="other/CAD_fusion_right_view.jpg" alt="CAD Fusion Right View" width="600">
+updating... for international tournament
 
 Detailed mechanical specifications are in [Models Documentation](models/README.md).
 
@@ -260,14 +253,14 @@ Videos showcasing our robot’s performance in testing and competition scenarios
 
 - **Obstacle Challenge**  
   [![Obstacle Challenge Video](https://img.youtube.com/vi/v3pcT7mglxo/0.jpg)](https://youtu.be/v3pcT7mglxo)  
-  *Shows traffic sign detection, obstacle avoidance, and parallel parking.*
+  *Shows traffic sign detection, obstacle avoidance, and parking.*
 
 ---
 
 ## 📸 Team Photos <a id="team-photos"></a>
 Official and informal photos of Team ANTi are available in [Team Photos](t-photos/README.md).
 
-<img src="t-photos/team_official.jpg" alt="Team ANTi Official Photo" width="600">
+updating... for international tournament
 
 ---
 

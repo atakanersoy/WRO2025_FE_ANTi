@@ -1,6 +1,6 @@
 # Software Documentation
 
-This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Friday, May 30, 2025, at 05:30 AM +03**.
+This folder contains the source code for Team ANTi’s WRO 2025 Future Engineers robot, written in **MicroPython** and running on the **STM32H747 dual-core microcontroller**. This documentation was last updated on **Friday, June 13, 2025, at 11:00 AM +03**.
 
 ## Software Overview
 Our software handles the WRO 2025 challenges: navigating dynamic racetracks, respecting traffic signs, avoiding obstacles, and performing parallel parking. Key features include:
@@ -83,9 +83,10 @@ STOP
 
 ## Vision Processing
 The vision system uses the GC2145 camera with CIELAB color space for robust detection under varying lighting:
-- **Track Detection**: Identifies dark lines (R,G,B < 50) to adjust steering.
-- **Marker Detection (Open Challenge)**: Detects orange (R>60, G<40) and blue (B>60, R<40) markers to determine turn direction.
-- **Sign Detection (Obstacle Challenge)**: Detects red (R>60, G,B<40), green (G>60, R,B<40), and magenta (R,B>50, G<30) for navigation and parking.
+
+- **Track Detection**: Identifies dark lines to adjust steering.
+- **Marker Detection (Open Challenge)**: Detects orange and blue markers to determine turn direction.
+- **Sign Detection (Obstacle Challenge)**: Detects red, green, and magenta signs for navigation and parking.
 
 <img src="example_detection.jpg" alt="Example Detection" width="600">
 
