@@ -37,12 +37,8 @@ This folder contains supplementary materials for Team ANTi’s WRO 2025 Future E
   <img src="KLS7-TS1204.jpg" alt="Tactile Switch" width="600">
 - `transparent_only_logo_WRO2025_FE_ANTi_logo_05-05-2025.png`: Team ANTi logo.  
   <img src="transparent_only_logo_WRO2025_FE_ANTi_logo_05-05-2025.png" alt="Team ANTi Logo" width="600">
-- `CAD_fusion_bottom_view.jpg`: CAD rendering of the bottom view.  
-  updating... for international tournament
-- `CAD_fusion_left_view.jpg`: CAD rendering of the left view.  
-  updating... for international tournament
 - `CAD_fusion_right_view.jpg`: CAD rendering of the right view.  
-  updating... for international tournament
+  <img src="CAD_fusion_right_view.jpg" alt="CAD Right View" width="600">
 - `lego87697_wheel_comparison.jpg`: Comparison image for LEGO 87697 tire selection.  
   <img src="lego87697_wheel_comparison.jpg" alt="LEGO 87697 Wheel Comparison" width="600">
 - `ANTi_wro_sim.png`: Simulation image from Webots, converted to physical work due to timeline constraints.  

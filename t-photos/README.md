@@ -7,9 +7,9 @@ This folder contains official and informal photos of Team ANTi, showcasing our t
 - `team_fun.jpg`: Informal team moment.
 - `workplace.jpg`: Team working on the robot in the lab.
 
-updating... for international tournament
+<img src="team_official.jpg" alt="Team ANTi Official Photo" width="600">
 
-updating... for international tournament
+<img src="team_fun.jpg" alt="Team Fun Moment" width="600">
 
 <img src="workplace.jpg" alt="Team ANTi Workplace" width="600">
 

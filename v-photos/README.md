@@ -4,9 +4,9 @@ This folder contains high-quality photos of Team ANTi’s WRO 2025 Future Engine
 
 ## Photo List
 - `front_view.jpg`: Front view of the robot.  
-  updating... for international tournament
+  <img src="front_view.jpg" alt="Front View" width="600">
 - `rear_view.jpg`: Rear view of the robot.  
-  updating... for international tournament
+  <img src="rear_view.jpg" alt="Rear View" width="600">
 - `left_view.jpg`: Left side view.  
   <img src="left_view.jpg" alt="Left View" width="600">
 - `right_view.jpg`: Right side view.  
@@ -14,7 +14,7 @@ This folder contains high-quality photos of Team ANTi’s WRO 2025 Future Engine
 - `top_view.jpg`: Top-down view.  
   <img src="top_view.jpg" alt="Top View" width="600">
 - `bottom_view.jpg`: Bottom view, highlighting chassis and wiring.  
-  updating... for international tournament
+  <img src="bottom_view.jpg" alt="Bottom View" width="600">
 
 ## Notes
 - Photos are taken in well-lit conditions to highlight design details.

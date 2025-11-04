@@ -6,8 +6,9 @@ This folder contains the 3D CAD models used for designing and manufacturing Team
 All components of our robot, including the chassis, wheel axles, rims, motor mounts, and differential gears, were designed using **Autodesk Fusion 360**. This professional CAD software allowed us to create precise models optimized for **Fused Filament Fabrication (FFF/FDM)** 3D printing, with some exploration into other techniques like **Stereolithography (SLA)** and **Continuous Fiber Reinforcement (CFR)**.
 
 ### Key Design Features
-- **Print-in-Place Ackermann Steering**: The steering mechanism uses a shorter linkage connecting the two front wheels, designed to be printed as a single unit for small size and precision.
-- **Compact Chassis**: Dimensions of 72mm (L) x 57mm (W) x 58mm (H), with sliders and holders for all components (pertinax board, servo, motor, battery). The total weight is 110g.
+- **Custom Ackermann Steering**: The steering mechanism uses a shorter linkage connecting the two front wheels, designed to be printed as a seperate units for small size and precision.
+- **Wheel Rotation Limits**: Mechanically limited to -50° to +32° per wheel, an asymmetry derived from Ackermann steering design, ensuring each wheel points toward the same circular center point for smooth turns.
+- **Compact Chassis**: Dimensions of 69mm (L) x 53mm (W) x 57mm (H), with sliders and holders for all components (pertinax board, servo, motor, battery). The total weight is ~130g.
 - **Differential**: A custom 4-gear mechanical differential distributes power from the motor to the rear wheels.
 - **Bearings**: Four bearings, one for each wheel, ensure smooth rotation and reduced friction.
 
@@ -24,13 +25,14 @@ We tested multiple materials and printing methods to optimize durability and per
   - Layer Height: 0.08mm–0.1mm (FDM).
   - Infill: 30–40% for structural components, 100% for gears and axles.
   - Nozzle: 0.4mm.
-  - Printer: Ender 3v3, Zaxe Z3S.
+  - Printer: Ender 3v3, Zaxe Z3S, Bambu Lab A1.
 
 <img src="3d_printer.jpg" alt="3D Printer Setup" width="600">
 
 ## File List
 - `3d_printer.jpg`: Image of the 3D printer setup.
 - `4_gear_design_mini_differential.3mf`: Design file for the 4-gear mini differential.
+- `building_steps.jpg`: High quality image during the assembly process.
 - `design_ackermann_servo_arm.stl`: STL file for the Ackermann servo arm.
 - `design_back_rim_long.3mf`: 3MF file for the long back rim.
 - `design_back_rim_short.3mf`: 3MF file for the short back rim.
