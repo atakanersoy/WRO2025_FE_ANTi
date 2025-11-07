@@ -7,9 +7,9 @@ import sensor
 servo_timer = pyb.Timer(4, freq=50)
 servo = servo_timer.channel(3, pyb.Timer.PWM, pin=pyb.Pin("PB8"))
 
-SV_CENTER = 2300
-SV_LEFT = 2750
-SV_RIGHT = 1850
+SV_CENTER = 1775
+SV_LEFT = 2575
+SV_RIGHT = 3275
 
 def sv(position):
     pulse = SV_CENTER

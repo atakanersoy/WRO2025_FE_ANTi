@@ -337,15 +337,19 @@ Our robot navigates the obstacle course using a combination of sensor fusion and
    - Update steering and speed via PID control.
 4. After 3 laps → Locate parking zone → Execute parking maneuver.
 
-#### Pseudocode for Obstacle Challenge
+#### Pseudocode for Obstacle Challenge (Sign Detection and Parking)
 ```
-  updating...
-
-WHILE True:
-    frame = camera.capture()
-    signs = detect_signs(frame, color_space="CIELAB")
-    distance = tof.read_distance()
-    ...
+INITIALIZE sensors (camera, tof, imu, encoder)
+FOR 4 laps:
+    MOVE 50cm
+    DETECT red, green, magenta, distance
+    IF magenta: MOVE 10cm → STOP
+    IF distance < 100cm:
+        IF red: AVOID right
+        IF green: AVOID left
+        ELSE: AVOID right
+    ELSE IF lap < 3: TURN 90°
+STOP
 ```
 
 

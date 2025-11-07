@@ -50,6 +50,10 @@ The Obstacle Challenge involves navigating three laps, respecting traffic signs 
 INITIALIZE sensors (camera, tof, imu, encoder)
 SET direction = 0, remaining_distance = 150cm
 
+SV_CENTER = 1775
+SV_LEFT = 2575
+SV_RIGHT = 3275
+
 WHILE remaining_distance > 0:
     MOVE segment_distance
     DETECT orange, blue markers
