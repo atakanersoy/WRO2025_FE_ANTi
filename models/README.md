@@ -93,6 +93,11 @@ The main chassis integrates all mechanical and electronic systems while maintain
 ### 🖨️ 3D Printing Equipment & Material Strategy
 We conducted extensive testing across multiple printing technologies in our university makerspace to achieve optimal results.
 
+**CAD & Slicing Software Integration**:
+- **Design Platform**: ***Autodesk Fusion*** for comprehensive 3D modeling, simulation, and engineering analysis
+- **Slicing Software**: ***Creality Print 6.3*** for optimized print preparation and manufacturing parameter management
+- **Workflow Integration**: Seamless transition from CAD design to manufacturing-ready 3MF files
+
 <p align="center">
   <img src="3d_printer.jpg" alt="3D Printing Setup" height="500">
 </p>
@@ -295,20 +300,21 @@ While silicone promised higher friction coefficients, our ultra-lightweight, hig
 
 | Component | File | Quantity | CAD Preview | Description |
 |-----------|------|----------|-------------|-------------|
-| **Main Chassis** | `design_base.3mf` | 1 | <img src="CAD_design_base_1.jpg" width="100"><img src="CAD_design_base_2.jpg" width="100"> | Primary structure with integrated mounting system |
-| **4-Gear Differential** | `design_4_gear_mini_differential.3mf` | 1 | <img src="CAD_design_4_gear_mini_differential_1.jpg" width="100"><img src="CAD_design_4_gear_mini_differential_2.jpg" width="100"> | Complete differential assembly with 4-gear mechanism and gear slots|
-| **Front Rim** | `design_front_rim_bearing.3mf` | 2 | <img src="CAD_design_front_rim_bearing_1.jpg" width="100"><img src="CAD_design_front_rim_bearing_2.jpg" width="100"> | Front wheel rims with integrated bearing seats (left/right) |
-| **Steering Arm** | `design_steering_arm.3mf` | 2 | <img src="CAD_design_steering_arm_1.jpg" width="100"><img src="CAD_design_steering_arm_2.jpg" width="100"> | Ackermann steering arms (left/right) |
-| **Steering Linkage** | `design_steering_linkage.3mf` | 1 | <img src="CAD_design_steering_linkage.jpg" width="100"> | Steering connection mechanism |
-| **25T Spur Gear** | `design_spur_25_gear.3mf` | 1 | <img src="CAD_design_spur_25_gear_1.jpg" width="100"><img src="CAD_design_spur_25_gear_2.jpg" width="100"> | 25-tooth torque transmission gear |
-| **26T Spur Gear** | `design_spur_26_gear.3mf` | 1 | <img src="CAD_design_spur_26_gear_1.jpg" width="100"><img src="CAD_design_spur_26_gear_2.jpg" width="100"> | 26-tooth motor output gear |
-| **12T Bevel Gear** | `design_bevel_12_gear.3mf` | 4 | <img src="CAD_design_bevel_12_gear_1.jpg" width="100"><img src="CAD_design_bevel_12_gear_2.jpg" width="100"> | Differential bevel gears (4 required for full assembly) |
-| **Motor Lid** | `design_motor_lid.3mf` | 1 | <img src="CAD_design_motor_lid.jpg" width="100"> | N20 motor mounting enclosure |
-| **Long Rear Rim** | `design_back_rim_long.3mf` | 1 | <img src="CAD_design_back_rim_long.jpg" width="100"> | Extended for right side, connecting farther from the gear |
-| **Short Rear Rim** | `design_back_rim_short.3mf` | 1 | <img src="CAD_design_back_rim_short.jpg" width="100"> | Shorter for left side, connecting closer to the gear |
-| **Front Top Cover** | `design_front_top_cover.3mf` | 1 | <img src="CAD_design_front_top_cover_1.jpg" width="100"><img src="CAD_design_front_top_cover_2.jpg" width="100"> | Electronics protection cover |
-| **Front Bottom Cover** | `design_front_bottom_cover.3mf` | 1 | <img src="CAD_design_front_bottom_cover.jpg" width="100"> | Underbody protection |
-| **Button Cap** | `design_button_cap.3mf` | 1 | <img src="CAD_design_button_cap_1.jpg" width="100"><img src="CAD_design_button_cap_2.jpg" width="100"> | Start button interface |
+| **Main Chassis** | [`design_base.3mf`](design_base.3mf) | 1 | <img src="CAD_design_base_1.jpg" width="100"><img src="CAD_design_base_2.jpg" width="100"> | Primary structure with integrated mounting system |
+| **4-Gear Differential** | [`design_4_gear_mini_differential.3mf`](design_4_gear_mini_differential.3mf) | 1 | <img src="CAD_design_4_gear_mini_differential_1.jpg" width="100"><img src="CAD_design_4_gear_mini_differential_2.jpg" width="100"> | Complete differential assembly with 4-gear mechanism and gear slots|
+| **Front Rim** | [`design_front_rim_bearing.3mf`](design_front_rim_bearing.3mf) | 2 | <img src="CAD_design_front_rim_bearing_1.jpg" width="100"><img src="CAD_design_front_rim_bearing_2.jpg" width="100"> | Front wheel rims with integrated bearing seats (left/right) |
+| **Steering Arm** | [`design_steering_arm.3mf`](design_steering_arm.3mf) | 2 | <img src="CAD_design_steering_arm_1.jpg" width="100"><img src="CAD_design_steering_arm_2.jpg" width="100"> | Ackermann steering arms (left/right) |
+| **Steering Linkage** | [`design_steering_linkage.3mf`](design_steering_linkage.3mf) | 1 | <img src="CAD_design_steering_linkage.jpg" width="100"> | Steering connection mechanism |
+| **25T Spur Gear** | [`design_spur_25_gear.3mf`](design_spur_25_gear.3mf) | 1 | <img src="CAD_design_spur_25_gear_1.jpg" width="100"><img src="CAD_design_spur_25_gear_2.jpg" width="100"> | 25-tooth torque transmission gear |
+| **26T Spur Gear** | [`design_spur_26_gear.3mf`](design_spur_26_gear.3mf) | 1 | <img src="CAD_design_spur_26_gear_1.jpg" width="100"><img src="CAD_design_spur_26_gear_2.jpg" width="100"> | 26-tooth motor output gear |
+| **12T Bevel Gear** | [`design_bevel_12_gear.3mf`](design_bevel_12_gear.3mf) | 4 | <img src="CAD_design_bevel_12_gear_1.jpg" width="100"><img src="CAD_design_bevel_12_gear_2.jpg" width="100"> | Differential bevel gears (4 required for full assembly) |
+| **Motor Lid** | [`design_motor_lid.3mf`](design_motor_lid.3mf) | 1 | <img src="CAD_design_motor_lid.jpg" width="100"> | N20 motor mounting enclosure |
+| **Long Rear Rim** | [`design_back_rim_long.3mf`](design_back_rim_long.3mf) | 1 | <img src="CAD_design_back_rim_long.jpg" width="100"> | Extended for right side, connecting farther from the gear |
+| **Short Rear Rim** | [`design_back_rim_short.3mf`](design_back_rim_short.3mf) | 1 | <img src="CAD_design_back_rim_short.jpg" width="100"> | Shorter for left side, connecting closer to the gear |
+| **Front Top Cover** | [`design_front_top_cover.3mf`](design_front_top_cover.3mf) | 1 | <img src="CAD_design_front_top_cover_1.jpg" width="100"><img src="CAD_design_front_top_cover_2.jpg" width="100"> | Electronics protection cover |
+| **Front Bottom Cover** | [`design_front_bottom_cover.3mf`](design_front_bottom_cover.3mf) | 1 | <img src="CAD_design_front_bottom_cover.jpg" width="100"> | Underbody protection |
+| **Button Cap** | [`design_button_cap.3mf`](design_button_cap.3mf) | 1 | <img src="CAD_design_button_cap_1.jpg" width="100"><img src="CAD_design_button_cap_2.jpg" width="100"> | Start button interface |
+
 
 ## 🚀 Engineering Design & Development Process
 
@@ -320,7 +326,7 @@ While silicone promised higher friction coefficients, our ultra-lightweight, hig
    - Strategic component integration planning and spatial optimization
 
 2. **Precision CAD Modeling & Engineering Simulation**
-   - Detailed modeling in Autodesk Fusion 360 with manufacturing considerations
+   - Detailed modeling in ***Autodesk Fusion*** with manufacturing considerations
    - Motion simulation and validation for steering and drive train systems
 
 3. **Prototyping & Performance Optimization**
@@ -354,5 +360,6 @@ While silicone promised higher friction coefficients, our ultra-lightweight, hig
 This comprehensive mechanical documentation provides complete transparency into our design process, manufacturing methods, validation procedures, and engineering decision-making. Every aspect of our mechanical system has been optimized for the unique challenges of autonomous navigation in the WRO 2025 Future Engineers category, enabling exact duplication while demonstrating engineering excellence through detailed component specifications, assembly instructions, performance data, and real-world validation.
 
 For electrical systems documentation: [Schemes Documentation](../schemes/README.md)  
+For software implementation and algorithms: [Software Documentation](../src/README.md)  
 For performance demonstrations: [Video Documentation](../video/README.md)  
-For component specifications: [Other Resources](../other/README.md)
+For additional resources and photos: [Other Documentation](../other/README.md)
