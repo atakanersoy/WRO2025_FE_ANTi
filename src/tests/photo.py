@@ -5,11 +5,13 @@ import image
 redLED = pyb.LED(1) # built-in red LED
 blueLED = pyb.LED(3) # built-in blue LED
 
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.QVGA) # 320x240 px
-#sensor.set_vflip(True) # Vertical flip
-#sensor.set_hmirror(True) # Horizontal mirror
+# Initialize camera sensor
+sensor.reset()  # Reset camera settings
+sensor.set_pixformat(sensor.RGB565)  # Set pixel format to RGB565 for color detection
+sensor.set_framesize(sensor.QVGA)  # Set frame size to QVGA (320x240)
+sensor.set_vflip(True)  # Vertically flip the image for reverse mounting
+sensor.set_hmirror(True)  # Horizontally mirror the image for reverse mounting
+sensor.skip_frames(time=500)  # Skip initial frames to stabilize the sensor
 
 redLED.on()
 sensor.skip_frames(time = 2000)

@@ -1,21 +1,28 @@
 import sensor,pyb
 from machine import Pin
 
-r,g,b=[pyb.Pin(p,pyb.Pin.OUT_PP)for p in("PE3","PC13","PF4")]
-def l(c):r.low()if c in'ROMW'else r.high();g.low()if c in'GOCW'and(c!='O'or pyb.millis()%1<1)else g.high();b.low()if c in'BCMW'else b.high()
-bt = Pin('PC4', Pin.IN, Pin.PULL_UP)
-def btn(r=1):
-    while bt.value(): pyb.delay(10)
-    while r and not bt.value(): pyb.delay(10)
+# RGB LED for status
+led_pins = [pyb.Pin(p, pyb.Pin.OUT_PP) for p in ("PE3", "PC13", "PF4")]  # R, G, B pins
+def l(color):
+    # Set LED color based on string code (e.g., 'R' red, 'G' green, 'M' magenta, 'off')
+    led_pins[0].value(0 if color in 'ROMWY' else 1)  # Red on/low for certain colors
+    led_pins[1].value(0 if color in 'GOCWY' and (color != 'O' or pyb.millis() % 1 < 1) else 1)  # Green, with blink for 'O'
+    led_pins[2].value(0 if color in 'BCMW' else 1)  # Blue
+# Button for start
+button_pin = Pin('PC4', Pin.IN, Pin.PULL_UP)
+def btn(release=1):
+    # Wait for button press (and release if specified)
+    while button_pin.value(): pyb.delay(1)
+    if release:
+        while not button_pin.value(): pyb.delay(1)
 
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.HVGA)
-sensor.skip_frames(time=500)
-sensor.set_auto_whitebal(False)
-sensor.set_auto_exposure(False, exposure_us=10000)
-sensor.set_vflip(True)
-sensor.set_hmirror(True)
+# Initialize camera sensor
+sensor.reset()  # Reset camera settings
+sensor.set_pixformat(sensor.RGB565)  # Set pixel format to RGB565 for color detection
+sensor.set_framesize(sensor.QVGA)  # Set frame size to QVGA (320x240)
+sensor.set_vflip(True)  # Vertically flip the image for reverse mounting
+sensor.set_hmirror(True)  # Horizontally mirror the image for reverse mounting
+sensor.skip_frames(time=500)  # Skip initial frames to stabilize the sensor
 
 image_counter = 1  # Initialize image counter
 

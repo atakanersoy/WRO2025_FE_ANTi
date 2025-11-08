@@ -268,7 +268,7 @@ We implemented a magnetic USB cable for the main camera microcontroller, providi
 
 - **3D Printing**: Used for prototyping (see [models/3d_printer.jpg](models/3d_printer.jpg)).
 
-<img src="other/soldering_setup.jpg" alt="Soldering Setup" width="600">
+<img src="schemes/soldering_setup.jpg" alt="Soldering Setup" width="600">
 <p><em>Our soldering setup for assembling the pertinax boards.</em></p>
 
 <img src="schemes/wiring_diagram.jpg" alt="Wiring Diagram" width="600">
@@ -310,7 +310,7 @@ We conducted extensive edge case scenario tests with multiple challenging lighti
 <img src="src/hard_light_condition_tests.jpg" alt="Hard Light Condition Tests" width="600">
 <p><em>Testing under challenging lighting conditions with strong sunlight from windows.</em></p>
 
-<img src="other/image_processing_setup.jpg" alt="Image Processing Setup" width="600">
+<img src="src/image_processing_setup.jpg" alt="Image Processing Setup" width="600">
 
 ### Obstacle Navigation Strategy
 Our robot navigates the obstacle course using a combination of sensor fusion and computer vision:
@@ -381,7 +381,7 @@ Our robot's mechanical design prioritizes compactness and durability:
 
 - **CAD Files**: Available at [models/design_base.3mf](models/design_base.3mf) and [models/4_gear_design_mini_differential.3mf](models/4_gear_design_mini_differential.3mf) for replication or modification.
 
-<img src="other/CAD_fusion_right_view.jpg" alt="CAD Fusion Right View" width="600">
+<img src="models/CAD_fusion_isometric_view.jpg" alt="CAD Fusion Right View" width="600">
 
 Detailed mechanical specifications are in [Models Documentation](models/README.md).
 

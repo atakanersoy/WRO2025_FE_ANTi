@@ -1,6 +1,6 @@
 # Other Resources
 
-This folder contains supplementary materials for Team ANTi's WRO 2025 Future Engineers robot, including component images, technical documentation, development photos, and design resources. This documentation was last updated on **Thursday, November 06, 2025, at 06:37 AM +03**.
+This folder contains supplementary materials for Team ANTi's WRO 2025 Future Engineers robot, including component images, technical documentation, development photos, and design resources. This documentation was last updated on **Saturday, November 08, 2025, at 08:23 AM +03**.
 
 ## Resource Categories
 
@@ -17,7 +17,7 @@ This folder contains supplementary materials for Team ANTi's WRO 2025 Future Eng
 | BOB-12009 | <img src="BOB12009.jpg" alt="Logic Level Converter" width="200"> | 3.3V–5V logic level converter |
 | SX1308 | <img src="SX1308.jpg" alt="Voltage Booster" width="200"> | 2A DC-DC Step-Up voltage booster |
 
-### Mechanical Components & Power
+### Movement & Power Components
 | Component | Image | Description |
 |-----------|-------|-------------|
 | N20 Motor | <img src="1500rpm_N20_dc_motor_encoder.jpg" alt="N20 Motor" width="200"> | 1500 RPM DC motor with Hall effect magnetic encoder |
@@ -30,33 +30,38 @@ This folder contains supplementary materials for Team ANTi's WRO 2025 Future Eng
 ### Design & Development
 | Resource | Image | Description |
 |----------|-------|-------------|
-| CAD Design | <img src="CAD_fusion_right_view.jpg" alt="CAD Design" width="300"> | CAD rendering showing mechanical design details |
 | Ackermann Steering | <img src="ackermann_steering_path.png" alt="Ackermann Steering" width="300"> | Simulation of steering path for 90-degree turn |
 | Motor Calculations | <img src="motor_speed_calculations.jpg" alt="Motor Calculations" width="300"> | Calculations for motor selection based on requirements |
-| Soldering Setup | <img src="soldering_setup.jpg" alt="Soldering Setup" width="300"> | Custom manufacturing setup for pertinax boards |
-| Image Processing | <img src="image_processing_setup.jpg" alt="Image Processing Setup" width="300"> | Development setup for computer vision testing |
+| ToF Window Lens | <img src="CAD_tof_measure_window.jpg" alt="ToF Measure Window" width="300"> | Dimensions and specifications of the ToF window lens used for narrower FoV |
+| Webots Simulation | <img src="ANTi_wro_sim.png" alt="Webots Simulation" width="300"> | Simulation concept (converted to physical implementation) |
 
 ### Branding & Achievements
 | Resource | Image | Description |
 |----------|-------|-------------|
 | Team Logo | <img src="transparent_only_logo_WRO2025_FE_ANTi_logo_05-05-2025.png" alt="Team Logo" width="200"> | Official Team ANTi competition logo |
 | Champion Trophy | <img src="turkey_champion_trophy.jpg" alt="Champion Trophy" width="200"> | Turkish National Champion achievement |
-| Webots Simulation | <img src="ANTi_wro_sim.png" alt="Webots Simulation" width="300"> | Simulation concept (converted to physical implementation) |
 
-## Technical Documentation
-- All component datasheets are available in PDF format with detailed specifications
-- Communication protocols optimized for low-latency UART between microcontrollers
-- Custom pertinax board manufacturing documentation included in schemes folder
-- Thermal management analysis and power distribution schematics available
+## Experienced Problems and Implemented Solutions
+During the development of the WRO 2025 robot, we encountered several challenges, including:
+
+1. **Integration Issues**: Difficulty in integrating various electronic components due to compatibility issues was resolved by selecting standardized components that are widely supported.
+
+2. **Power Management**: A critical issue was discovered where the 3.3V rail remained active even when the system was off, risking battery drain. This was resolved by performing a hardware modification to the LiPo Rider Plus, rewiring its LDO regulator to the switched 5V rail.
+
+3. **Sensor Calibration**: Initial sensor readings were inconsistent. We implemented a systematic calibration routine to ensure accuracy across all sensors.
+
+4. **Mobility Constraints**: The robot experienced mobility issues on uneven terrain. We redesigned the chassis to improve stability and traction.
 
 ## Notes
-- All component specifications are sourced from official manufacturer datasheets
-- Development photos showcase our hands-on manufacturing and testing processes
-- Simulation assets demonstrate our comprehensive design validation approach
-- Custom calculations and comparisons inform our engineering decisions
+- All component specifications are sourced from official manufacturer datasheets.
+- Development photos showcase our hands-on manufacturing and testing processes.
+- Simulation assets demonstrate our comprehensive design validation approach.
+- Custom calculations and comparisons guide our engineering decisions.
 
-For detailed hardware wiring schematics and electrical diagrams, see [Schemes Documentation](../schemes/README.md).  
-For mechanical design files, see [Models Documentation](../models/README.md).  
-For software implementation, see [Software Documentation](../src/README.md).
+## Technical Documentation
+For detailed documentation, please refer to the following resources:
+- **[Schemes Documentation](../schemes/README.md)**: Contains component datasheets, custom pertinax board manufacturing docs, thermal analysis, and power distribution schematics.
+- **[Models Documentation](../models/README.md)**: Includes hardware specifications and mechanical design files.
+- **[Software Documentation](../src/README.md)**: Features communication protocols (including optimized UART) and software implementation details.
 
 Follow our competition journey: 📸 [Instagram](https://www.instagram.com/anti.wro/) • 🎥 [YouTube](https://www.youtube.com/@solipsy.)
