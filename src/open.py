@@ -135,7 +135,8 @@ CAM_CENTER = CAM_WIDTH // 2  # Center for error calculation
 # Color thresholds in LAB for find_blobs (L_min, L_max, A_min, A_max, B_min, B_max)
 th = {
     "BK": [(0, 25, -10, 20, -15, 10)],  # Black threshold for wall following
-    "OB": [(5, 60, 5, 20, 0, 25), (5, 60, 5, 80, -80, -25)],  # Orange/Blue for corners
+    "O": [(5, 60, 5, 20, 0, 25)],  # Orange for corner detection
+    "B": [(5, 60, 5, 80, -80, -25)],  # Blue for corner detection
 }
 
 def detect_region(color_key, roi=(0, 0, CAM_WIDTH, CAM_HEIGHT)):
@@ -151,7 +152,7 @@ def detect_region(color_key, roi=(0, 0, CAM_WIDTH, CAM_HEIGHT)):
     return 0, False  # No detection
 
 # Navigation parameters
-direction = 1  # 1 for CW, -1 for CCW
+direction = 0  # 0 unknown, 1 for CW, -1 for CCW
 corner_count = 0  # Track corners navigated
 corner_cd = 2000  # Min time ms between corner detections
 last_corner_time = pyb.millis()  # Last corner detection time
@@ -162,7 +163,7 @@ turn_tol = 5  # Tolerance for turn completion in degrees
 state = 'initial_forward'  # State machine start
 target_heading = 0  # Desired heading
 no_black_count = 0  # Counter for no black line detection
-min_segment_dist = 500  # Minimum distance before allowing turn
+min_segment_dist = 300  # Minimum distance before allowing turn
 final_forward = 475  # Final forward distance after last corner
 
 # PID parameters
@@ -224,7 +225,7 @@ try:
         now = pyb.millis()
         dt = (now - last_time) / 1000.0
         last_time = now
-        gyro = read_gyro()
+        gyro = read_gyro() - gyro_zero_offset  # Apply zero offset for accurate integration
         angle += gyro * dt
         delta_enc = encoder - last_enc
         last_enc = encoder
@@ -235,8 +236,9 @@ try:
         
         # Corner detection with cooldown to prevent multiple detections
         if pyb.elapsed_millis(last_corner_time) > corner_cd:
-            ob_error, ob_det = detect_region("OB")
-            if ob_det:
+            ob_error, ob_det = detect_region("O")
+            bb_error, bb_det = detect_region("B")
+            if ob_det or bb_det:
                 corner_count += 1
                 last_corner_time = pyb.millis()
                 pid_integral = 0  # Reset integral on corner detection
@@ -260,13 +262,22 @@ try:
                 break
         
         if state == 'initial_forward':
-            # Initial approach using IMU only until front ToF reaches 990mm
+            # Initial approach using IMU only until front ToF reaches 800mm
             # This ensures straight approach before switching to camera guidance
             kp, ki, kd = 2, 0.001, 1
             error = heading_diff
             
+            # During initial forward, detect orange or blue to set direction
+            orange_error, orange_det = detect_region("O")
+            blue_error, blue_det = detect_region("B")
+            if direction == 0:  # Only set if unknown
+                if orange_det and not blue_det:
+                    direction = 1  # Orange first: CW
+                elif blue_det and not orange_det:
+                    direction = -1  # Blue first: CCW
+            
             front_dist = read_distance()
-            if front_dist <= 990:  # Switch to camera following when 990mm reached
+            if front_dist <= 800:  # Switch to camera following when 800mm reached
                 state = 'follow_wall'
                 fetch_data(b'z')  # Reset encoder for new segment
                 

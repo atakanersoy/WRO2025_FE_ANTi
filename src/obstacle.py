@@ -294,7 +294,7 @@ try:
     # Uses camera to detect colors, adjusts path based on color and direction.
     # Tracks corners using orange/blue detection with cooldown.
     # States: 'no_color', 'follow_color', 'lost_color', 'pass_color'
-    # Transitions to parking when 13 corners reached.
+    # Transitions to U-turn when 13 corners reached.
     while True:
         fetch_data(b'r')
         now = pyb.millis()
@@ -338,7 +338,7 @@ try:
         else: no_color_count += 1
         if corner_count >= 13:
             fetch_data(b'z')
-            state = 'end_park1'
+            state = 'u_turn1'  # Start U-turn maneuver after 3 full laps
             target_speed = max_fs
             break
         if state in ('no_color', 'no_color1'):
@@ -373,6 +373,83 @@ try:
         current_speed += min(2, max(-2, target_speed - current_speed))
         set_speed(current_speed)
         set_steering(240 + steer)
+    # Section 2.5: 180° U-Turn Maneuver
+    # This loop performs a 180-degree turn to reverse direction after completing the rectangular course.
+    # It uses absolute gyro angle targeting 180° regardless of starting orientation.
+    # States: 'u_turn1' -> 'u_turn2' -> 'u_turn3'
+    # Uses aggressive steering initially, then PID for precise alignment to 180°.
+    while True:
+        fetch_data(b'r')
+        now = pyb.millis()
+        dt = (now - last_time) / 1000.0
+        last_time = now
+        gyro = read_gyro()
+        angle += gyro * dt
+        # Calculate heading error to absolute 180° target
+        heading_error = (((180 - angle + 180) % 360) - 180)
+        if state == 'u_turn1':
+            # Initial turn entry with aggressive steering to establish rotation toward 180°
+            kp, ki, kd = 2.5, 0.001, 1.5
+            error = heading_error
+            target_speed = min_fs  # Controlled speed for maneuver
+            # Apply strong steering in the shortest direction to 180°
+            base_steer = 120 if heading_error > 0 else -120  # Steer toward 180°
+            pid_integral = max(-100, min(100, pid_integral + error * ki))
+            steer = base_steer + error * kp + pid_integral + (error - last_error) * kd
+            last_error = error
+            current_speed += min(2, max(-2, target_speed - current_speed))
+            set_speed(current_speed)
+            set_steering(240 + steer)
+            # Transition when 60° progress achieved
+            if abs(heading_error) < 120:
+                state = 'u_turn2'
+                pid_integral = 0  # Reset I for main turn phase
+        elif state == 'u_turn2':
+            # Main turning phase with maintained steering toward 180°
+            kp, ki, kd = 2.0, 0.001, 1.2
+            error = heading_error
+            target_speed = min_fs
+            # Maintain steering with reduced aggression as we approach target
+            base_steer = 80 if heading_error > 0 else -80
+            pid_integral = max(-100, min(100, pid_integral + error * ki))
+            steer = base_steer + error * kp + pid_integral + (error - last_error) * kd
+            last_error = error
+            current_speed += min(2, max(-2, target_speed - current_speed))
+            set_speed(current_speed)
+            set_steering(240 + steer)
+            # Transition when close to target (within 45 degrees)
+            if abs(heading_error) < 45:
+                state = 'u_turn3'
+                target_speed = min_ps  # Reduce speed for precise alignment
+        elif state == 'u_turn3':
+            # Final alignment with precise control to exact 180°
+            kp, ki, kd = 3.0, 0.001, 2.0
+            error = heading_error
+            target_speed = min_ps
+            # Pure PID control for fine alignment
+            pid_integral = max(-100, min(100, pid_integral + error * ki))
+            steer = error * kp + pid_integral + (error - last_error) * kd
+            last_error = error
+            current_speed += min(2, max(-2, target_speed - current_speed))
+            set_speed(current_speed)
+            set_steering(240 + steer)
+            # Complete U-turn when precisely aligned to 180°
+            if abs(heading_error) < turn_tol:
+                # Reverse travel direction after U-turn
+                direction = -direction
+                # Update target heading for new direction
+                target_heading = 180  # Facing 180°
+                
+                fetch_data(b'z')  # Reset slave encoders
+                
+                # Transition to parking approach
+                state = 'end_park1'
+                target_speed = max_fs
+                break
+        # Fail-safe - break if U-turn takes too long (5 seconds)
+        if pyb.elapsed_millis(now) > 5000:
+            state = 'end_park1'
+            break
     # Section 3: Parking Maneuver
     # Enters parking spot upon magenta detection.
     # Follows magenta wall with camera offset based on direction.
