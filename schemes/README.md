@@ -147,9 +147,16 @@ The cable management strategy was specifically designed to prevent socket cables
 **Technical Specifications**:
 - **Resolution**: 2MP (1600×1200) for detailed track detection
 - **Optics**: 2.2mm focal length with 80° diagonal field of view
-- **Distortion**: <1.0% barrel distortion for accurate line following
-- **Interface**: DCMI parallel interface to STM32H747
+- **Distortion**: <1.0% barrel distortion for accurate object following
 - **Power**: 2.8V analog core with 3.3V digital I/O
+- **Interface**: DCMI parallel interface compatible with STM32H747
+
+<p align="center">
+  <img src="STM32H747_DCMI_interface.jpg" alt="DCMI Interconnection" height="400">
+</p>
+<p align="center">
+  <em>DCMI interconnection and data path in the STM32H745/755 and STM32H747/757 devices. The DMA1 and DMA2 in the D2 domain can access slaves in the D1 and D3 domains, allowing efficient data transfer from the DCMI to the respective memories.</em>
+</p>
 
 **Performance Features**:
 - **Low-Light Capability**: Enhanced sensitivity for competition lighting variations
@@ -212,6 +219,15 @@ The cable management strategy was specifically designed to prevent socket cables
 
 **Result**: Extended usable detection range from ~150cm to ~300cm for side sensors
 
+#### ToF Schematic
+
+<p align="center">
+  <img src="tof_scheme.jpg" alt="ToF Sensor Schematic" height="350">
+</p>
+<p align="center">
+  <em>ToF sensor schematic illustrating connections and layout for the VL53L1X and VL53L3CX sensors with only the input voltage different.</em>
+</p>
+
 ### Motor Control Systems
 
 <p align="center">
@@ -237,6 +253,15 @@ The cable management strategy was specifically designed to prevent socket cables
 - **Logic Level Conversion**: BOB-12009 converts 3.3V microcontroller signals to 5V servo requirements
 - **Precision Control**: PWM signal conditioning for accurate Ackermann steering positioning
 - **Power Isolation**: Separate power rail prevents servo noise affecting sensitive sensors
+
+#### Motor & Encoder Schematic
+
+<p align="center">
+  <img src="motor_encoder_scheme.jpg" alt="Motor and Encoder Schematic" height="400">
+</p>
+<p align="center">
+  <em>Motor and encoder schematic showing the integration of the motor with Hall effect encoder.</em>
+</p>
 
 ### Power Management Components
 

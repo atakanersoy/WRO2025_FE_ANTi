@@ -402,9 +402,10 @@ angle += gyro * dt
 This approach allowed us to maintain both high-performance camera operation and accurate IMU readings, demonstrating that sometimes simpler solutions can be more effective in integrated systems.
 
 ### 🅿️ Parallel Parking Strategy Optimization
+
 **🚧 Challenge**: Our compact vehicle design (69mm length) required extremely precise parallel parking maneuvers within the tight 1.5× vehicle length parking space (103.5mm)
 
-**💡 Solution**: We designed and implemented a strategic front extension piece that provided crucial benefits:
+**💡 Initial Solution**: We designed and implemented a strategic front extension piece that provided crucial benefits:
 
 - **📏 Length Extension**: Added 21mm front piece increased total vehicle length to 90mm
 - **Parking Space Optimization**: Parking lot requirement became 90mm × 1.5 = 135mm (13.5cm)
@@ -419,13 +420,28 @@ This approach allowed us to maintain both high-performance camera operation and 
 5. **Straighten**: Final orientation adjustment
 
 > 💡🐜 ***Fun Discovery***: The distinctive front extension piece gave our vehicle a unique appearance that reminded us of an **ANT**'s mandible, perfectly matching our team name and creating a memorable visual identity!
-
 <p align="center">
   <img src="parallel_park_setup.jpg" alt="Original 69mm Vehicle in Parking Lot" height="450">
   <img src="parallel_park_strategy.jpg" alt="90mm Vehicle with Extension" height="450">
 </p>
 <p align="center">
   <em>1) Original 69mm vehicle in tight parking space • 2) Extended 90mm vehicle with strategic front piece</em>
+</p>
+
+**💡 Final Evolution**: After extensive testing, we iterated on the extension design to further enhance safety and performance:
+
+- **📏 Enhanced Length**: Increased extension to 41mm for total vehicle length of 110mm
+- **Parking Space Adjustment**: Expanded requirement to 110mm × 1.5 = 165mm
+- **Improved Safety Margin**: Greater clearance for multi-turn maneuvers while maintaining higher speeds
+- **Design Refinements**: Incorporated competition stickers creating "ANTi" branding and ant-inspired eyes
+- **Maneuver Strategy**: Retained multiple-turn parking for optimal speed-safety balance
+
+<p align="center">
+  <img src="parallel_park_final_setup.jpg" alt="Final 110mm Vehicle in Extended Parking Lot" height="350">
+  <img src="parallel_park_final_strategy.jpg" alt="Final Extension Design Detail" height="350">
+</p>
+<p align="center">
+  <em>1) Final 110mm vehicle in 165mm parking space with measurement verification • 2) Close-up of refined extension with custom branding and visual enhancements</em>
 </p>
 
 ### Lighting Condition Adaptation

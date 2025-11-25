@@ -32,7 +32,7 @@ Guided by our vision to ***"never stop developing unless we stop learning,"*** w
 - [📂 Complete Documentation Structure](#complete-documentation-structure)
 - [👥 The Team](#the-team)
 - [🎯 Challenge Overview](#challenge-overview)
-- [🤖 Our Robot](#vehicle-platform)
+- [🤖 Our Robot](#our-robot)
 - [🔧 Electronic Systems](#electronic-systems)
 - [⚙ Mechanical Systems](#mechanical-systems)
 - [💻 Software Architecture](#software-architecture)
@@ -97,6 +97,15 @@ Team ANTi includes passionate students from Türkiye, guided by a coach. This is
 </div>
 
 > 💡 *Fun Fact*: The fun team photo (`team_fun.jpg`) is our childhood photo from 2015, when we were 9 years old, standing on a go-kart race podium!
+
+### **Team Journey Moments**
+Throughout our development process from initial concept to competition readiness, we captured key moments demonstrating our collaborative spirit and technical dedication. These images showcase our brainstorming sessions, technical adjustments, and competition preparation.
+<div align="center">
+<img src="t-photos/team_moment.jpg" alt="Team Collaboration During National Final" width="600">
+<p><em>Team members collaborating during national final competition - discussing strategy while testing the vehicle on the field and preparing to activate it.</em></p>
+<img src="t-photos/team_moment.gif" alt="Official Competition Start with Team Excitement" width="600">
+<p><em>Dynamic view of official competition start during national final - team member pressing start button with excitement as vehicle begins its run.</em></p>
+</div>
 
 ---
 
@@ -174,7 +183,7 @@ Team ANTi includes passionate students from Türkiye, guided by a coach. This is
 
 ---
 
-## 🤖 **Our Robot** <a id="vehicle-platform"></a>
+## 🤖 **Our Robot** <a id="our-robot"></a>
 
 <div align="center">
 <img src="v-photos/front_view.jpg" alt="ANTi Autonomous Vehicle" width="600">
@@ -202,6 +211,11 @@ Complete vehicle documentation with detailed component identification available 
 <div align="center">
 <img src="models/design_to_life.jpg" alt="Digital to Physical Realization" width="600">
 </div>
+
+### Potential Future Improvements (Overall Vehicle)
+- Reduce size even further to ≈ 60 × 45 × 50 mm by switching to smaller LiPo (3.7 V), a coreless motor + micro gearbox and smaller mechanic differential style.
+- Implement four-wheel steering or active rear-axle 4 wheel drive to control for tighter turning radius on narrow lanes.
+- Add a very small extra second camera facing backwards for reverse parking or emergency obstacle detection.
 
 ---
 
@@ -254,9 +268,9 @@ Our electronic architecture emphasizes modularity, reliability, and hands-on eng
 | Component Schematic | Description | Full Documentation |
 |---------------------|-------------|-------------------|
 | <img src="schemes/camera_microcontroller_scheme.jpg" height="150"> | **STM32H747 Camera Controller**<br>Camera interface and peripheral connections | [View Details](schemes/README.md#microcontroller-systems) |
-| <img src="schemes/sensor_microcontroller_scheme.jpg" height="150"> | **nRF52832 Sensor Processor**<br>ToF sensors and IMU integration | [View Details](schemes/README.md#microcontroller-systems) |
-| <img src="schemes/driver_scheme.jpg" height="150"> | **DRV8833 Motor Driver**<br>Motor control with voltage boosting | [View Details](schemes/README.md#motor-control-systems) |
-| <img src="schemes/servo_scheme.jpg" height="150"> | **FS0307 Servo Control**<br>Steering mechanism with level conversion | [View Details](schemes/README.md#motor-control-systems) |
+| <img src="schemes/sensor_microcontroller_scheme.jpg" height="150"> | **nRF52832 Sensor Processor**<br>ToF sensors and sensor fusion integration | [View Details](schemes/README.md#microcontroller-systems) |
+| <img src="schemes/driver_scheme.jpg" height="150"> | **DRV8833 Motor Driver**<br>Motor control that uses SX1308 voltage boosting | [View Details](schemes/README.md#motor-control-systems) |
+| <img src="schemes/servo_scheme.jpg" height="150"> | **FS0307 Servo Control**<br>Steering mechanism that uses BOB-12009 level conversion | [View Details](schemes/README.md#motor-control-systems) |
 | <img src="schemes/charger_power_management_scheme.jpg" height="150"> | **Power Management System**<br>LiPo charging and distribution | [View Details](schemes/README.md#power-management-components) |
 | <img src="schemes/step_up_scheme.jpg" height="150"> | **SX1308 Voltage Booster**<br>Motor power regulation | [View Details](schemes/README.md#power-management-components) |
 | <img src="schemes/tof_scheme.jpg" height="150"> | **ToF Sensor Network**<br>Distance measurement system | [View Details](schemes/README.md#time-of-flight-sensor-system) |
@@ -343,6 +357,11 @@ Implementation of magnetic USB connectors for programming interfaces significant
 - **Charge Duration**: ~45 minutes via USB-C fast charging
 - **Power Consumption**: 0.8W minimum, 200-250mA typical operational current
 
+### Powertrain – Potential Improvements
+- Switch to higher RPM coreless motor + greater 50:1 Micro Metal Gearbox → theoretical top speed > 2.3 m/s while keeping the same design.
+- Replace the 26:25 external gear with an internal planetary stage inside the N20 motor can → saves 4 mm length with direct mounting of the motor to the rear axle.
+- Active cooling (micro 10 mm fan, 0.8 g) → could improve the overall airflow in the system, allowing for faster operation and even higher stability.
+
 ---
 
 ## ⚙ **Mechanical Systems** <a id="mechanical-systems"></a>
@@ -383,6 +402,11 @@ Our custom Ackermann steering system ensures each wheel maintains optimal alignm
 - **Performance Refinement**: Multi-component assembly for long-term precision
 - **Final Implementation**: Four M2 fasteners with locking nuts for permanent alignment
 - **Wheel Articulation**: -50° to +32° range optimized for competition track dimensions
+
+### Mechanical – Potential Improvements
+- True Ackermann geometry with adjustable tie-rod lengths for further adjustability.
+- Ball bearings on all four kingpins and differential gears → theoretical 7–9 % less rolling resistance in CAD tests.
+- Possible uspension system using micro torsion bars could improve stability if the track includes ground obstacles in the future when crossing the 3 mm track.
 
 ### **Power Transmission System**
 
@@ -667,13 +691,12 @@ Our compact dimensions required innovative parking strategies to operate within 
 
 **🚧 Challenge**: Our compact 69mm vehicle length required extremely precise maneuvers within the tight 1.5× vehicle length parking space (103.5mm)
 
-**💡 Solution**: We designed a strategic front extension piece providing crucial benefits:
+**💡 Initial Solution**: We designed a strategic front extension piece providing crucial benefits:
 
 - **📏 Length Optimization**: 21mm extension increased total length to 90mm
 - **Parking Space Compliance**: Requirement became 90mm × 1.5 = 135mm
 - **Critical Clearance Design**: Narrow extension width allowed wall clearance during turns
 - **🔄 Maneuverability Enhancement**: Additional space enabled reliable parking execution
-
 **Multi-Stage Parking Sequence**:
 1. **Approach Phase**: Follow magenta wall using camera guidance
 2. **Turn-in Execution**: 80-degree turn outside parking spot
@@ -682,7 +705,6 @@ Our compact dimensions required innovative parking strategies to operate within 
 5. **Straighten Phase**: Final orientation adjustment
 
 > 💡🐜 ***Team Identity Discovery***: The distinctive front extension piece created a visual resemblance to an **ANT**'s mandible, perfectly aligning with our team name and establishing a memorable identity!
-
 <p align="center">
   <img src="src/parallel_park_setup.jpg" alt="Original 69mm Vehicle in Parking Lot" height="350">
   <img src="src/parallel_park_strategy.jpg" alt="90mm Vehicle with Extension" height="350">
@@ -690,6 +712,24 @@ Our compact dimensions required innovative parking strategies to operate within 
 <p align="center">
   <em>1) Original 69mm vehicle demonstrating parking constraints • 2) Extended 90mm vehicle with strategic front piece implementation</em>
 </p>
+
+**💡 Final Evolution**: After extensive testing, we iterated on the extension design to further enhance safety and performance:
+- **📏 Enhanced Length**: Increased extension to 41mm for total vehicle length of 110mm
+- **Parking Space Adjustment**: Expanded requirement to 110mm × 1.5 = 165mm
+- **Improved Safety Margin**: Greater clearance for multi-turn maneuvers while maintaining higher speeds
+- **Design Refinements**: Incorporated competition stickers creating "ANTi" branding and ant-inspired eyes
+- **Maneuver Strategy**: Retained multiple-turn parking for optimal speed-safety balance
+<p align="center">
+  <img src="src/parallel_park_final_setup.jpg" alt="Final 110mm Vehicle in Extended Parking Lot" height="275">
+  <img src="src/parallel_park_final_strategy.jpg" alt="Final Extension Design Detail" height="275">
+</p>
+<p align="center">
+  <em>1) Final 110mm vehicle in 165mm parking space with measurement verification • 2) Close-up of refined extension with custom branding and visual enhancements</em>
+</p>
+
+### Parallel Parking – Potential Improvements
+- Pure vision-based parking using parking walls as obstacles → eliminates ToF distance dependency and works even if the parking zone is shifted elsewhere.
+- Single-motion slow parking trajectory instead of safer fast three-segment → would save ~1.5 s .
 
 ### **Obstacle Navigation Patterns**
 
@@ -715,6 +755,11 @@ The algorithm handles all possible obstacle combinations through systematic patt
 <img src="src/example_detection.jpg" alt="Single Color Detection" style="width:80%;">
 <img src="src/example_all_detection.jpg" alt="Multi-Color Detection" style="width:80%;">
 </div>
+
+### Software & Algorithms – Potential Improvements
+- Replace hand-tuned PID with online adaptive gain scheduling based on lap time → we already have easy possible integration of lap-time logging via the nRF52832.
+- Add optical flow (using the GC2145 bottom 80×80 pixels) for dead-reckoning backup when camera loses the line detection.
+- Over-the-air firmware update via BLE (nRF52832) → Eliminates the need for cables during competition day, further improving ease of use compared to magnetic connections.
 
 Complete software implementation details available in our [source code documentation](src/README.md).
 
